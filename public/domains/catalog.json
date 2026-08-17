@@ -15,9 +15,92 @@
     ],
     "default_level": "college",
     "has_navigator": true,
-    "has_book": false,
-    "books": [],
-    "generated_concepts": [],
+    "has_book": true,
+    "books": [
+      {
+        "target": "graph_representation",
+        "file": "output/college.en/sonnet/html/book_graph_representation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "graph_embedding",
+        "file": "output/college.en/sonnet/html/book_graph_embedding.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "harary_graph",
+        "file": "output/college.en/sonnet/html/book_harary_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
+    "generated_concepts": [
+      {
+        "name": "connectedness",
+        "label": "Connectedness",
+        "file": "output/college.en/sonnet/html/concept_connectedness.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "connectivity_numbers",
+        "label": "Connectivity Numbers",
+        "file": "output/college.en/sonnet/html/concept_connectivity_numbers.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "graph",
+        "label": "Graph",
+        "file": "output/college.en/sonnet/html/concept_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "graph_embedding",
+        "label": "Graph Embedding",
+        "file": "output/college.en/sonnet/html/concept_graph_embedding.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "graph_representation",
+        "label": "Graph Representation",
+        "file": "output/college.en/sonnet/html/concept_graph_representation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "harary_graph",
+        "label": "Harary Graph",
+        "file": "output/college.en/sonnet/html/concept_harary_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "vertex_degree",
+        "label": "Vertex Degree",
+        "file": "output/college.en/sonnet/html/concept_vertex_degree.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "vertex_edge_cut",
+        "label": "Vertex Edge Cut",
+        "file": "output/college.en/sonnet/html/concept_vertex_edge_cut.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "walk_trail_path_cycle",
+        "label": "Walk Trail Path Cycle",
+        "file": "output/college.en/sonnet/html/concept_walk_trail_path_cycle.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
     "source": {
       "title": "Graph Theory and Complex Networks: An Introduction",
       "authors": "Maarten van Steen",
@@ -42,9 +125,139 @@
     ],
     "default_level": "college",
     "has_navigator": true,
-    "has_book": false,
-    "books": [],
-    "generated_concepts": [],
+    "has_book": true,
+    "books": [
+      {
+        "target": "strongly_connected_orientation",
+        "file": "output/college.en/sonnet/html/book_strongly_connected_orientation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "communication_network_routing",
+        "file": "output/college.en/sonnet/html/book_communication_network_routing.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "storage_load_balancing",
+        "file": "output/college.en/sonnet/html/book_storage_load_balancing.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "class_scheduling_application",
+        "file": "output/college.en/sonnet/html/book_class_scheduling_application.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "four_color_theorem",
+        "file": "output/college.en/sonnet/html/book_four_color_theorem.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
+    "generated_concepts": [
+      {
+        "name": "chromatic_number",
+        "label": "Chromatic Number",
+        "file": "output/college.en/sonnet/html/concept_chromatic_number.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "class_scheduling_application",
+        "label": "Class Scheduling Application",
+        "file": "output/college.en/sonnet/html/concept_class_scheduling_application.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "communication_network_routing",
+        "label": "Communication Network Routing",
+        "file": "output/college.en/sonnet/html/concept_communication_network_routing.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "directed_graph",
+        "label": "Directed Graph",
+        "file": "output/college.en/sonnet/html/concept_directed_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "directed_walks_paths_cycles",
+        "label": "Directed Walks Paths Cycles",
+        "file": "output/college.en/sonnet/html/concept_directed_walks_paths_cycles.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "edge_chromatic_number",
+        "label": "Edge Chromatic Number",
+        "file": "output/college.en/sonnet/html/concept_edge_chromatic_number.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "edge_coloring",
+        "label": "Edge Coloring",
+        "file": "output/college.en/sonnet/html/concept_edge_coloring.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "four_color_theorem",
+        "label": "Four Color Theorem",
+        "file": "output/college.en/sonnet/html/concept_four_color_theorem.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "orientation",
+        "label": "Orientation",
+        "file": "output/college.en/sonnet/html/concept_orientation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "storage_load_balancing",
+        "label": "Storage Load Balancing",
+        "file": "output/college.en/sonnet/html/concept_storage_load_balancing.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "strong_weak_connectivity",
+        "label": "Strong Weak Connectivity",
+        "file": "output/college.en/sonnet/html/concept_strong_weak_connectivity.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "strongly_connected_orientation",
+        "label": "Strongly Connected Orientation",
+        "file": "output/college.en/sonnet/html/concept_strongly_connected_orientation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "underlying_graph",
+        "label": "Underlying Graph",
+        "file": "output/college.en/sonnet/html/concept_underlying_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "vertex_coloring",
+        "label": "Vertex Coloring",
+        "file": "output/college.en/sonnet/html/concept_vertex_coloring.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
     "source": {
       "title": "Graph Theory and Complex Networks: An Introduction",
       "authors": "Maarten van Steen",
@@ -69,9 +282,128 @@
     ],
     "default_level": "college",
     "has_navigator": true,
-    "has_book": false,
-    "books": [],
-    "generated_concepts": [],
+    "has_book": true,
+    "books": [
+      {
+        "target": "chinese_postman_problem",
+        "file": "output/college.en/sonnet/html/book_chinese_postman_problem.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "traveling_salesman_problem",
+        "file": "output/college.en/sonnet/html/book_traveling_salesman_problem.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
+    "generated_concepts": [
+      {
+        "name": "chinese_postman_problem",
+        "label": "Chinese Postman Problem",
+        "file": "output/college.en/sonnet/html/concept_chinese_postman_problem.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "connected_graph",
+        "label": "Connected Graph",
+        "file": "output/college.en/sonnet/html/concept_connected_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "degree",
+        "label": "Degree",
+        "file": "output/college.en/sonnet/html/concept_degree.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "directed_hamiltonian_transformation",
+        "label": "Directed Hamiltonian Transformation",
+        "file": "output/college.en/sonnet/html/concept_directed_hamiltonian_transformation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "euler_tour",
+        "label": "Euler Tour",
+        "file": "output/college.en/sonnet/html/concept_euler_tour.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "fleurys_algorithm",
+        "label": "Fleurys Algorithm",
+        "file": "output/college.en/sonnet/html/concept_fleurys_algorithm.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "hamilton_cycle",
+        "label": "Hamilton Cycle",
+        "file": "output/college.en/sonnet/html/concept_hamilton_cycle.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "hamilton_path",
+        "label": "Hamilton Path",
+        "file": "output/college.en/sonnet/html/concept_hamilton_path.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "hamiltonian_graph",
+        "label": "Hamiltonian Graph",
+        "file": "output/college.en/sonnet/html/concept_hamiltonian_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "matching",
+        "label": "Matching",
+        "file": "output/college.en/sonnet/html/concept_matching.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "optimal_hamilton_cycle",
+        "label": "Optimal Hamilton Cycle",
+        "file": "output/college.en/sonnet/html/concept_optimal_hamilton_cycle.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "tour",
+        "label": "Tour",
+        "file": "output/college.en/sonnet/html/concept_tour.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "traveling_salesman_problem",
+        "label": "Traveling Salesman Problem",
+        "file": "output/college.en/sonnet/html/concept_traveling_salesman_problem.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "walk",
+        "label": "Walk",
+        "file": "output/college.en/sonnet/html/concept_walk.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "weighted_graph",
+        "label": "Weighted Graph",
+        "file": "output/college.en/sonnet/html/concept_weighted_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
     "source": {
       "title": "Graph Theory and Complex Networks: An Introduction",
       "authors": "Maarten van Steen",
@@ -96,9 +428,139 @@
     ],
     "default_level": "college",
     "has_navigator": true,
-    "has_book": false,
-    "books": [],
-    "generated_concepts": [],
+    "has_book": true,
+    "books": [
+      {
+        "target": "kruskals_algorithm",
+        "file": "output/college.en/sonnet/html/book_kruskals_algorithm.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "dijkstras_sink_tree_algorithm",
+        "file": "output/college.en/sonnet/html/book_dijkstras_sink_tree_algorithm.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "bellman_ford_algorithm",
+        "file": "output/college.en/sonnet/html/book_bellman_ford_algorithm.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "count_to_infinity_problem",
+        "file": "output/college.en/sonnet/html/book_count_to_infinity_problem.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "algorithmic_complexity_comparison",
+        "file": "output/college.en/sonnet/html/book_algorithmic_complexity_comparison.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
+    "generated_concepts": [
+      {
+        "name": "algorithmic_complexity_comparison",
+        "label": "Algorithmic Complexity Comparison",
+        "file": "output/college.en/sonnet/html/concept_algorithmic_complexity_comparison.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "bellman_ford_algorithm",
+        "label": "Bellman Ford Algorithm",
+        "file": "output/college.en/sonnet/html/concept_bellman_ford_algorithm.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "big_o_notation",
+        "label": "Big O Notation",
+        "file": "output/college.en/sonnet/html/concept_big_o_notation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "connected_graph",
+        "label": "Connected Graph",
+        "file": "output/college.en/sonnet/html/concept_connected_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "count_to_infinity_problem",
+        "label": "Count To Infinity Problem",
+        "file": "output/college.en/sonnet/html/concept_count_to_infinity_problem.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "cycle",
+        "label": "Cycle",
+        "file": "output/college.en/sonnet/html/concept_cycle.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "dijkstras_sink_tree_algorithm",
+        "label": "Dijkstras Sink Tree Algorithm",
+        "file": "output/college.en/sonnet/html/concept_dijkstras_sink_tree_algorithm.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "kruskals_algorithm",
+        "label": "Kruskals Algorithm",
+        "file": "output/college.en/sonnet/html/concept_kruskals_algorithm.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "minimum_spanning_tree",
+        "label": "Minimum Spanning Tree",
+        "file": "output/college.en/sonnet/html/concept_minimum_spanning_tree.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "routing_protocol",
+        "label": "Routing Protocol",
+        "file": "output/college.en/sonnet/html/concept_routing_protocol.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "sink_tree",
+        "label": "Sink Tree",
+        "file": "output/college.en/sonnet/html/concept_sink_tree.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "spanning_tree",
+        "label": "Spanning Tree",
+        "file": "output/college.en/sonnet/html/concept_spanning_tree.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "tree",
+        "label": "Tree",
+        "file": "output/college.en/sonnet/html/concept_tree.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "weighted_graph",
+        "label": "Weighted Graph",
+        "file": "output/college.en/sonnet/html/concept_weighted_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
     "source": {
       "title": "Graph Theory and Complex Networks: An Introduction",
       "authors": "Maarten van Steen",
@@ -123,9 +585,127 @@
     ],
     "default_level": "college",
     "has_navigator": true,
-    "has_book": false,
-    "books": [],
-    "generated_concepts": [],
+    "has_book": true,
+    "books": [
+      {
+        "target": "hub_identification",
+        "file": "output/college.en/sonnet/html/book_hub_identification.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "epidemic_dissemination",
+        "file": "output/college.en/sonnet/html/book_epidemic_dissemination.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "facility_placement",
+        "file": "output/college.en/sonnet/html/book_facility_placement.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
+    "generated_concepts": [
+      {
+        "name": "centrality",
+        "label": "Centrality",
+        "file": "output/college.en/sonnet/html/concept_centrality.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "closeness_centrality",
+        "label": "Closeness Centrality",
+        "file": "output/college.en/sonnet/html/concept_closeness_centrality.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "clustering_coefficient",
+        "label": "Clustering Coefficient",
+        "file": "output/college.en/sonnet/html/concept_clustering_coefficient.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "degree_distribution",
+        "label": "Degree Distribution",
+        "file": "output/college.en/sonnet/html/concept_degree_distribution.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "eccentricity",
+        "label": "Eccentricity",
+        "file": "output/college.en/sonnet/html/concept_eccentricity.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "epidemic_dissemination",
+        "label": "Epidemic Dissemination",
+        "file": "output/college.en/sonnet/html/concept_epidemic_dissemination.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "facility_placement",
+        "label": "Facility Placement",
+        "file": "output/college.en/sonnet/html/concept_facility_placement.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "geodesic_distance",
+        "label": "Geodesic Distance",
+        "file": "output/college.en/sonnet/html/concept_geodesic_distance.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "hub_identification",
+        "label": "Hub Identification",
+        "file": "output/college.en/sonnet/html/concept_hub_identification.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "radius",
+        "label": "Radius",
+        "file": "output/college.en/sonnet/html/concept_radius.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "shortest_path",
+        "label": "Shortest Path",
+        "file": "output/college.en/sonnet/html/concept_shortest_path.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "triangle",
+        "label": "Triangle",
+        "file": "output/college.en/sonnet/html/concept_triangle.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "triple",
+        "label": "Triple",
+        "file": "output/college.en/sonnet/html/concept_triple.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "vertex_degree",
+        "label": "Vertex Degree",
+        "file": "output/college.en/sonnet/html/concept_vertex_degree.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
     "source": {
       "title": "Graph Theory and Complex Networks: An Introduction",
       "authors": "Maarten van Steen",
@@ -150,9 +730,160 @@
     ],
     "default_level": "college",
     "has_navigator": true,
-    "has_book": false,
-    "books": [],
-    "generated_concepts": [],
+    "has_book": true,
+    "books": [
+      {
+        "target": "network_resilience",
+        "file": "output/college.en/sonnet/html/book_network_resilience.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "food_web_modeling",
+        "file": "output/college.en/sonnet/html/book_food_web_modeling.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "collaboration_and_citation_networks",
+        "file": "output/college.en/sonnet/html/book_collaboration_and_citation_networks.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "targeted_attack_vulnerability",
+        "file": "output/college.en/sonnet/html/book_targeted_attack_vulnerability.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "tunable_clustering_scale_free_model",
+        "file": "output/college.en/sonnet/html/book_tunable_clustering_scale_free_model.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
+    "generated_concepts": [
+      {
+        "name": "barabasi_albert_graph",
+        "label": "Barabasi Albert Graph",
+        "file": "output/college.en/sonnet/html/concept_barabasi_albert_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "clustering_coefficient_random_graphs",
+        "label": "Clustering Coefficient Random Graphs",
+        "file": "output/college.en/sonnet/html/concept_clustering_coefficient_random_graphs.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "collaboration_and_citation_networks",
+        "label": "Collaboration And Citation Networks",
+        "file": "output/college.en/sonnet/html/concept_collaboration_and_citation_networks.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "degree_distribution",
+        "label": "Degree Distribution",
+        "file": "output/college.en/sonnet/html/concept_degree_distribution.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "er_random_graph",
+        "label": "Er Random Graph",
+        "file": "output/college.en/sonnet/html/concept_er_random_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "expected_value",
+        "label": "Expected Value",
+        "file": "output/college.en/sonnet/html/concept_expected_value.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "expected_vertex_degree",
+        "label": "Expected Vertex Degree",
+        "file": "output/college.en/sonnet/html/concept_expected_vertex_degree.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "food_web_modeling",
+        "label": "Food Web Modeling",
+        "file": "output/college.en/sonnet/html/concept_food_web_modeling.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "giant_component",
+        "label": "Giant Component",
+        "file": "output/college.en/sonnet/html/concept_giant_component.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "hub_node",
+        "label": "Hub Node",
+        "file": "output/college.en/sonnet/html/concept_hub_node.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "network_resilience",
+        "label": "Network Resilience",
+        "file": "output/college.en/sonnet/html/concept_network_resilience.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "power_law_distribution",
+        "label": "Power Law Distribution",
+        "file": "output/college.en/sonnet/html/concept_power_law_distribution.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "preferential_attachment",
+        "label": "Preferential Attachment",
+        "file": "output/college.en/sonnet/html/concept_preferential_attachment.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "random_variable",
+        "label": "Random Variable",
+        "file": "output/college.en/sonnet/html/concept_random_variable.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "scale_free_network",
+        "label": "Scale Free Network",
+        "file": "output/college.en/sonnet/html/concept_scale_free_network.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "targeted_attack_vulnerability",
+        "label": "Targeted Attack Vulnerability",
+        "file": "output/college.en/sonnet/html/concept_targeted_attack_vulnerability.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "tunable_clustering_scale_free_model",
+        "label": "Tunable Clustering Scale Free Model",
+        "file": "output/college.en/sonnet/html/concept_tunable_clustering_scale_free_model.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
     "source": {
       "title": "Graph Theory and Complex Networks: An Introduction",
       "authors": "Maarten van Steen",
@@ -177,9 +908,202 @@
     ],
     "default_level": "college",
     "has_navigator": true,
-    "has_book": false,
-    "books": [],
-    "generated_concepts": [],
+    "has_book": true,
+    "books": [
+      {
+        "target": "as_topology",
+        "file": "output/college.en/sonnet/html/book_as_topology.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "chord",
+        "file": "output/college.en/sonnet/html/book_chord.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "newscast",
+        "file": "output/college.en/sonnet/html/book_newscast.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "bowtie_structure",
+        "file": "output/college.en/sonnet/html/book_bowtie_structure.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "pagerank",
+        "file": "output/college.en/sonnet/html/book_pagerank.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
+    "generated_concepts": [
+      {
+        "name": "as_topology",
+        "label": "As Topology",
+        "file": "output/college.en/sonnet/html/concept_as_topology.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "autonomous_system",
+        "label": "Autonomous System",
+        "file": "output/college.en/sonnet/html/concept_autonomous_system.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "bowtie_structure",
+        "label": "Bowtie Structure",
+        "file": "output/college.en/sonnet/html/concept_bowtie_structure.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "chord",
+        "label": "Chord",
+        "file": "output/college.en/sonnet/html/concept_chord.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "computer_network",
+        "label": "Computer Network",
+        "file": "output/college.en/sonnet/html/concept_computer_network.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "epidemic_protocol",
+        "label": "Epidemic Protocol",
+        "file": "output/college.en/sonnet/html/concept_epidemic_protocol.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "finger_table",
+        "label": "Finger Table",
+        "file": "output/college.en/sonnet/html/concept_finger_table.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "http",
+        "label": "Http",
+        "file": "output/college.en/sonnet/html/concept_http.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "internet_service_provider",
+        "label": "Internet Service Provider",
+        "file": "output/college.en/sonnet/html/concept_internet_service_provider.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "newscast",
+        "label": "Newscast",
+        "file": "output/college.en/sonnet/html/concept_newscast.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "overlay_network",
+        "label": "Overlay Network",
+        "file": "output/college.en/sonnet/html/concept_overlay_network.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "pagerank",
+        "label": "Pagerank",
+        "file": "output/college.en/sonnet/html/concept_pagerank.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "partial_view",
+        "label": "Partial View",
+        "file": "output/college.en/sonnet/html/concept_partial_view.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "peering_relationship",
+        "label": "Peering Relationship",
+        "file": "output/college.en/sonnet/html/concept_peering_relationship.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "random_overlay_network",
+        "label": "Random Overlay Network",
+        "file": "output/college.en/sonnet/html/concept_random_overlay_network.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "router",
+        "label": "Router",
+        "file": "output/college.en/sonnet/html/concept_router.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "scale_free_network",
+        "label": "Scale Free Network",
+        "file": "output/college.en/sonnet/html/concept_scale_free_network.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "small_world_network",
+        "label": "Small World Network",
+        "file": "output/college.en/sonnet/html/concept_small_world_network.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "structured_overlay_network",
+        "label": "Structured Overlay Network",
+        "file": "output/college.en/sonnet/html/concept_structured_overlay_network.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "successor",
+        "label": "Successor",
+        "file": "output/college.en/sonnet/html/concept_successor.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "url",
+        "label": "Url",
+        "file": "output/college.en/sonnet/html/concept_url.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "web_graph",
+        "label": "Web Graph",
+        "file": "output/college.en/sonnet/html/concept_web_graph.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "world_wide_web",
+        "label": "World Wide Web",
+        "file": "output/college.en/sonnet/html/concept_world_wide_web.html",
+        "model": "sonnet",
+        "language": "en"
+      }
+    ],
     "source": {
       "title": "Graph Theory and Complex Networks: An Introduction",
       "authors": "Maarten van Steen",
