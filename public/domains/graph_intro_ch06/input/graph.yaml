@@ -1,0 +1,139 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch6
+primitives:
+  random_variable:
+    defines: A variable whose possible values each occur with a certain probability, restricted here to
+      the discrete case.
+    tier: 0
+  expected_value:
+    defines: The weighted average of a random variable's possible values, weighted by their probabilities.
+    tier: 0
+  er_random_graph:
+    defines: An undirected graph on n vertices, denoted ER(n,p), in which each pair of distinct vertices
+      is connected by an edge independently with probability p.
+    tier: 0
+  small_world_phenomenon:
+    defines: The empirical observation that most pairs of people/nodes in a social network are connected
+      by surprisingly short chains of acquaintance.
+    tier: 0
+  power_law_distribution:
+    defines: A distribution where a quantity's probability is proportional to a negative power of its
+      value, exhibiting scale-invariance under rescaling of x.
+    tier: 0
+concepts:
+  degree_distribution:
+    defines: The probability distribution P[δ = k] describing the likelihood that a vertex has degree
+      k; for ER(n,p) graphs this follows a binomial distribution.
+    composed_of:
+    - random_variable
+    - er_random_graph
+    tier: 1
+  expected_vertex_degree:
+    defines: The mean degree of a vertex in an ER(n,p) graph, proven to equal p(n-1).
+    composed_of:
+    - er_random_graph
+    - expected_value
+    tier: 1
+  clustering_coefficient_random_graphs:
+    defines: The expected fraction of a vertex's neighbors that are themselves connected; for ER(n,p)
+      this equals p exactly.
+    composed_of:
+    - er_random_graph
+    tier: 1
+  giant_component:
+    defines: The single large connected component that emerges and dominates a random graph once the connection
+      probability p exceeds a threshold.
+    composed_of:
+    - er_random_graph
+    - expected_vertex_degree
+    tier: 2
+  average_path_length:
+    defines: The estimated mean shortest-path distance between vertices in a random graph, expressible
+      in terms of n and the average vertex degree.
+    composed_of:
+    - er_random_graph
+    - expected_vertex_degree
+    tier: 2
+  scale_free_network:
+    defines: A network whose vertex degree distribution follows a power law, P[k] ∝ k^(-α), typically
+      with 2 < α < 3.
+    composed_of:
+    - power_law_distribution
+    - degree_distribution
+    tier: 2
+  watts_strogatz_graph:
+    defines: A graph model, denoted WS(n,k,p), built by ring-lattice construction with k neighbors per
+      vertex followed by random rewiring of edges with probability p, combining high clustering with short
+      path lengths.
+    composed_of:
+    - small_world_phenomenon
+    - clustering_coefficient_random_graphs
+    - average_path_length
+    tier: 3
+  hub_node:
+    defines: A high-degree vertex characteristic of scale-free networks that acts as an intermediate connector
+      between many other, less-connected vertices.
+    composed_of:
+    - scale_free_network
+    tier: 3
+  preferential_attachment:
+    defines: A growth mechanism in which new vertices connect to existing vertices with probability proportional
+      to the existing vertex's current degree, producing scale-free structure.
+    composed_of:
+    - scale_free_network
+    - degree_distribution
+    tier: 3
+  weak_ties:
+    defines: Rewired long-range links in a small-world network that connect otherwise distant communities
+      and play a crucial structural role.
+    composed_of:
+    - watts_strogatz_graph
+    tier: 4
+  barabasi_albert_graph:
+    defines: A scale-free graph, denoted BA(n, n0, m), constructed by iteratively growing a network and
+      attaching each new vertex's m edges via preferential attachment.
+    composed_of:
+    - preferential_attachment
+    tier: 4
+  generalized_barabasi_albert_graph:
+    defines: An extension of the BA construction that adds extra edges among existing vertices proportional
+      to the product of their degrees, allowing the power-law exponent to be tuned.
+    composed_of:
+    - barabasi_albert_graph
+    tier: 5
+applications:
+  network_resilience:
+    defines: The observed robustness of random networks, whereby most vertices remain in one large component
+      even after removing a large fraction of vertices.
+    needs:
+    - giant_component
+    tier: 3
+  food_web_modeling:
+    defines: The application of random-graph and network-analysis techniques to model predator-prey relationships
+      in ecosystems and study their resilience.
+    needs:
+    - er_random_graph
+    - giant_component
+    tier: 3
+  collaboration_and_citation_networks:
+    defines: Real-world networks (actor collaborations, scientific co-authorship, citations) analyzed
+      using random-graph theory to understand collaboration structure and influence.
+    needs:
+    - er_random_graph
+    - scale_free_network
+    - degree_distribution
+    tier: 3
+  targeted_attack_vulnerability:
+    defines: The property whereby scale-free networks fragment quickly when their highest-degree hubs
+      are deliberately removed, despite being robust to random removal.
+    needs:
+    - hub_node
+    - scale_free_network
+    tier: 4
+  tunable_clustering_scale_free_model:
+    defines: A construction algorithm (Holme-Kim) that extends preferential attachment by explicitly forming
+      triangles with a probability q, allowing the clustering coefficient to be tuned while preserving
+      a scale-free degree distribution.
+    needs:
+    - barabasi_albert_graph
+    - clustering_coefficient_random_graphs
+    tier: 5

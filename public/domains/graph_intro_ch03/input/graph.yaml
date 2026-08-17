@@ -1,0 +1,147 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch3
+primitives:
+  walk:
+    defines: An alternating sequence of vertices and edges connecting a starting vertex to an ending vertex,
+      as introduced in earlier chapters.
+    tier: 0
+  degree:
+    defines: The number of edges incident to a vertex, used here to determine odd/even parity for traversal
+      theorems.
+    tier: 0
+  connected_graph:
+    defines: A graph in which every pair of vertices is joined by a path, assumed as a precondition for
+      the traversal theorems in this chapter.
+    tier: 0
+  weighted_graph:
+    defines: A graph in which each edge is assigned a nonnegative numeric weight, used to formulate minimal-cost
+      traversal problems.
+    tier: 0
+concepts:
+  tour:
+    defines: A closed (u,v)-walk with u = v that traverses every edge of a graph.
+    composed_of:
+    - walk
+    tier: 1
+  euler_trail:
+    defines: A (u,v)-trail traversing every edge of a connected graph exactly once, which exists iff the
+      graph has exactly two vertices of odd degree, originating and ending at those vertices.
+    composed_of:
+    - walk
+    - degree
+    - connected_graph
+    tier: 1
+  matching:
+    defines: A subset of a graph's edges such that no two edges share an incident vertex, used to solve
+      the edge-duplication step of the Chinese postman problem.
+    composed_of:
+    - connected_graph
+    tier: 1
+  hamilton_path:
+    defines: A path in a connected graph that contains every vertex of the graph exactly once.
+    composed_of:
+    - walk
+    - connected_graph
+    tier: 1
+  graph_closure:
+    defines: The graph obtained by iteratively joining nonadjacent vertex pairs whose degree sum is at
+      least n, until no such pair remains.
+    composed_of:
+    - degree
+    - connected_graph
+    tier: 1
+  euler_tour:
+    defines: A tour in which every edge of the graph is traversed exactly once; exists in a connected
+      graph iff no vertex has odd degree.
+    composed_of:
+    - tour
+    - degree
+    - connected_graph
+    tier: 2
+  perfect_matching:
+    defines: A matching in which every vertex of the graph is incident with an edge of the matching.
+    composed_of:
+    - matching
+    - degree
+    tier: 2
+  hamilton_cycle:
+    defines: A cycle in a connected graph that contains every vertex of the graph exactly once.
+    composed_of:
+    - hamilton_path
+    tier: 2
+  rotational_transformation:
+    defines: A technique for converting one path into an alternative path of the same length by reversing
+      a segment via a shortcut edge, used within Posa's algorithm.
+    composed_of:
+    - hamilton_path
+    tier: 2
+  fleurys_algorithm:
+    defines: A constructive algorithm for finding an Euler tour in an Eulerian graph by repeatedly choosing
+      edges that are not cut edges unless no alternative exists.
+    composed_of:
+    - euler_tour
+    - connected_graph
+    tier: 3
+  hamiltonian_graph:
+    defines: A graph that contains at least one Hamilton cycle.
+    composed_of:
+    - hamilton_cycle
+    tier: 3
+  posa_algorithm:
+    defines: A trial-and-error algorithm for finding a Hamilton cycle in a graph by iteratively extending
+      a path and applying rotational transformations when direct extension is blocked.
+    composed_of:
+    - hamilton_path
+    - rotational_transformation
+    tier: 3
+  optimal_hamilton_cycle:
+    defines: A Hamilton cycle in a weighted (typically complete) graph whose total edge weight is minimal,
+      found by iteratively swapping edge pairs to reduce total weight.
+    composed_of:
+    - hamilton_cycle
+    - weighted_graph
+    tier: 3
+  dirac_theorem:
+    defines: A sufficient condition stating that a simple graph with n≥3 vertices is Hamiltonian if every
+      vertex has degree at least n/2.
+    composed_of:
+    - hamiltonian_graph
+    - degree
+    tier: 4
+  bondy_chvatal_theorem:
+    defines: A theorem stating that a simple graph is Hamiltonian if and only if its closure is Hamiltonian.
+    composed_of:
+    - graph_closure
+    - hamiltonian_graph
+    tier: 4
+  directed_hamiltonian_transformation:
+    defines: A construction that converts a directed Hamiltonian graph into an equivalent undirected graph
+      (via in/out vertex triplets) so that undirected Hamilton cycle techniques can be applied to directed
+      traveling salesman problems.
+    composed_of:
+    - hamiltonian_graph
+    tier: 4
+  ore_theorem:
+    defines: A generalization of Dirac's theorem stating that for nonadjacent vertices u, v with degree
+      sum at least n, G is Hamiltonian iff G plus the edge (u,v) is Hamiltonian.
+    composed_of:
+    - dirac_theorem
+    - degree
+    tier: 5
+applications:
+  chinese_postman_problem:
+    defines: The problem of finding a minimum-weight closed walk that covers every edge of a weighted
+      graph at least once, solved by duplicating edges to make the graph Eulerian and then applying Fleury's
+      algorithm.
+    needs:
+    - weighted_graph
+    - euler_tour
+    - matching
+    - fleurys_algorithm
+    tier: 4
+  traveling_salesman_problem:
+    defines: The practical problem of finding a minimum-weight Hamilton cycle visiting a set of locations,
+      modeled using complete weighted (and possibly directed) graphs.
+    needs:
+    - optimal_hamilton_cycle
+    - directed_hamiltonian_transformation
+    tier: 5

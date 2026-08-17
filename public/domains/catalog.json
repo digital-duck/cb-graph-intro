@@ -1,1 +1,218 @@
-[]
+[
+  {
+    "id": "graph_intro_ch01",
+    "name": "Graph Theory Ch1: Foundations",
+    "description": "Graph Theory and Complex Networks: An Introduction (van Steen), Chapter 1: Foundations.",
+    "capstone": "graph_representation",
+    "nodes": 26,
+    "edges": 30,
+    "primitives": 1,
+    "concepts": 22,
+    "applications": 3,
+    "tags": [
+      "math",
+      "cs"
+    ],
+    "default_level": "college",
+    "has_navigator": true,
+    "has_book": false,
+    "books": [],
+    "generated_concepts": [],
+    "source": {
+      "title": "Graph Theory and Complex Networks: An Introduction",
+      "authors": "Maarten van Steen",
+      "license": "Freely available textbook PDF (not OpenStax / not CC BY)",
+      "url": "",
+      "attribution": "Concept graph extracted from: Graph Theory and Complex Networks: An Introduction by Maarten van Steen. Freely available textbook PDF. This concept graph is a companion learning aid, not a reproduction."
+    }
+  },
+  {
+    "id": "graph_intro_ch02",
+    "name": "Graph Theory Ch2: Extensions",
+    "description": "Graph Theory and Complex Networks: An Introduction (van Steen), Chapter 2: Extensions.",
+    "capstone": "strongly_connected_orientation",
+    "nodes": 27,
+    "edges": 26,
+    "primitives": 4,
+    "concepts": 18,
+    "applications": 5,
+    "tags": [
+      "math",
+      "cs"
+    ],
+    "default_level": "college",
+    "has_navigator": true,
+    "has_book": false,
+    "books": [],
+    "generated_concepts": [],
+    "source": {
+      "title": "Graph Theory and Complex Networks: An Introduction",
+      "authors": "Maarten van Steen",
+      "license": "Freely available textbook PDF (not OpenStax / not CC BY)",
+      "url": "",
+      "attribution": "Concept graph extracted from: Graph Theory and Complex Networks: An Introduction by Maarten van Steen. Freely available textbook PDF. This concept graph is a companion learning aid, not a reproduction."
+    }
+  },
+  {
+    "id": "graph_intro_ch03",
+    "name": "Graph Theory Ch3: Network traversal",
+    "description": "Graph Theory and Complex Networks: An Introduction (van Steen), Chapter 3: Network traversal.",
+    "capstone": "chinese_postman_problem",
+    "nodes": 23,
+    "edges": 36,
+    "primitives": 4,
+    "concepts": 17,
+    "applications": 2,
+    "tags": [
+      "math",
+      "cs"
+    ],
+    "default_level": "college",
+    "has_navigator": true,
+    "has_book": false,
+    "books": [],
+    "generated_concepts": [],
+    "source": {
+      "title": "Graph Theory and Complex Networks: An Introduction",
+      "authors": "Maarten van Steen",
+      "license": "Freely available textbook PDF (not OpenStax / not CC BY)",
+      "url": "",
+      "attribution": "Concept graph extracted from: Graph Theory and Complex Networks: An Introduction by Maarten van Steen. Freely available textbook PDF. This concept graph is a companion learning aid, not a reproduction."
+    }
+  },
+  {
+    "id": "graph_intro_ch04",
+    "name": "Graph Theory Ch4: Trees",
+    "description": "Graph Theory and Complex Networks: An Introduction (van Steen), Chapter 4: Trees.",
+    "capstone": "kruskals_algorithm",
+    "nodes": 18,
+    "edges": 24,
+    "primitives": 5,
+    "concepts": 8,
+    "applications": 5,
+    "tags": [
+      "math",
+      "cs"
+    ],
+    "default_level": "college",
+    "has_navigator": true,
+    "has_book": false,
+    "books": [],
+    "generated_concepts": [],
+    "source": {
+      "title": "Graph Theory and Complex Networks: An Introduction",
+      "authors": "Maarten van Steen",
+      "license": "Freely available textbook PDF (not OpenStax / not CC BY)",
+      "url": "",
+      "attribution": "Concept graph extracted from: Graph Theory and Complex Networks: An Introduction by Maarten van Steen. Freely available textbook PDF. This concept graph is a companion learning aid, not a reproduction."
+    }
+  },
+  {
+    "id": "graph_intro_ch05",
+    "name": "Graph Theory Ch5: Network analysis",
+    "description": "Graph Theory and Complex Networks: An Introduction (van Steen), Chapter 5: Network analysis.",
+    "capstone": "hub_identification",
+    "nodes": 28,
+    "edges": 33,
+    "primitives": 6,
+    "concepts": 19,
+    "applications": 3,
+    "tags": [
+      "math",
+      "cs"
+    ],
+    "default_level": "college",
+    "has_navigator": true,
+    "has_book": false,
+    "books": [],
+    "generated_concepts": [],
+    "source": {
+      "title": "Graph Theory and Complex Networks: An Introduction",
+      "authors": "Maarten van Steen",
+      "license": "Freely available textbook PDF (not OpenStax / not CC BY)",
+      "url": "",
+      "attribution": "Concept graph extracted from: Graph Theory and Complex Networks: An Introduction by Maarten van Steen. Freely available textbook PDF. This concept graph is a companion learning aid, not a reproduction."
+    }
+  },
+  {
+    "id": "graph_intro_ch06",
+    "name": "Graph Theory Ch6: Random networks",
+    "description": "Graph Theory and Complex Networks: An Introduction (van Steen), Chapter 6: Random networks.",
+    "capstone": "network_resilience",
+    "nodes": 22,
+    "edges": 30,
+    "primitives": 5,
+    "concepts": 12,
+    "applications": 5,
+    "tags": [
+      "math",
+      "cs"
+    ],
+    "default_level": "college",
+    "has_navigator": true,
+    "has_book": false,
+    "books": [],
+    "generated_concepts": [],
+    "source": {
+      "title": "Graph Theory and Complex Networks: An Introduction",
+      "authors": "Maarten van Steen",
+      "license": "Freely available textbook PDF (not OpenStax / not CC BY)",
+      "url": "",
+      "attribution": "Concept graph extracted from: Graph Theory and Complex Networks: An Introduction by Maarten van Steen. Freely available textbook PDF. This concept graph is a companion learning aid, not a reproduction."
+    }
+  },
+  {
+    "id": "graph_intro_ch07",
+    "name": "Graph Theory Ch7: Modern computer networks",
+    "description": "Graph Theory and Complex Networks: An Introduction (van Steen), Chapter 7: Modern computer networks.",
+    "capstone": "as_topology",
+    "nodes": 33,
+    "edges": 35,
+    "primitives": 13,
+    "concepts": 15,
+    "applications": 5,
+    "tags": [
+      "math",
+      "cs"
+    ],
+    "default_level": "college",
+    "has_navigator": true,
+    "has_book": false,
+    "books": [],
+    "generated_concepts": [],
+    "source": {
+      "title": "Graph Theory and Complex Networks: An Introduction",
+      "authors": "Maarten van Steen",
+      "license": "Freely available textbook PDF (not OpenStax / not CC BY)",
+      "url": "",
+      "attribution": "Concept graph extracted from: Graph Theory and Complex Networks: An Introduction by Maarten van Steen. Freely available textbook PDF. This concept graph is a companion learning aid, not a reproduction."
+    }
+  },
+  {
+    "id": "graph_intro_ch08",
+    "name": "Graph Theory Ch8: Social networks",
+    "description": "Graph Theory and Complex Networks: An Introduction (van Steen), Chapter 8: Social networks.",
+    "capstone": "affiliation_network",
+    "nodes": 26,
+    "edges": 24,
+    "primitives": 6,
+    "concepts": 19,
+    "applications": 1,
+    "tags": [
+      "math",
+      "cs"
+    ],
+    "default_level": "college",
+    "has_navigator": true,
+    "has_book": false,
+    "books": [],
+    "generated_concepts": [],
+    "source": {
+      "title": "Graph Theory and Complex Networks: An Introduction",
+      "authors": "Maarten van Steen",
+      "license": "Freely available textbook PDF (not OpenStax / not CC BY)",
+      "url": "",
+      "attribution": "Concept graph extracted from: Graph Theory and Complex Networks: An Introduction by Maarten van Steen. Freely available textbook PDF. This concept graph is a companion learning aid, not a reproduction."
+    }
+  }
+]

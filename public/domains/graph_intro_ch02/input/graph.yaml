@@ -1,0 +1,157 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch2
+primitives:
+  directed_graph:
+    defines: A digraph D = (V, A) consists of vertices and arcs, where each arc <u,v> joins a tail vertex
+      u to a head vertex v.
+    tier: 0
+  weighted_graph:
+    defines: A graph in which each edge e has an associated real-valued weight w(e), with subgraph weight
+      defined as the sum of its edge weights.
+    tier: 0
+  edge_coloring:
+    defines: An assignment of colors to the edges of a graph such that edges incident to the same vertex
+      receive different colors.
+    tier: 0
+  vertex_coloring:
+    defines: An assignment of colors to the vertices of a graph such that no two adjacent vertices share
+      the same color.
+    tier: 0
+concepts:
+  underlying_graph:
+    defines: The undirected graph G(D) obtained from a digraph D by replacing each arc with its undirected
+      counterpart.
+    composed_of:
+    - directed_graph
+    tier: 1
+  orientation:
+    defines: A digraph D(G) obtained from an undirected graph G by assigning a direction to each edge.
+    composed_of:
+    - directed_graph
+    tier: 1
+  in_out_neighbor_sets:
+    defines: For a vertex v in a digraph, the in-neighbor set consists of vertices with an arc pointing
+      to v, and the out-neighbor set consists of vertices v points to.
+    composed_of:
+    - directed_graph
+    tier: 1
+  indegree_outdegree:
+    defines: The indegree of a vertex is the number of arcs with that vertex as head; the outdegree is
+      the number of arcs with that vertex as tail.
+    composed_of:
+    - in_out_neighbor_sets
+    tier: 2
+  degree_distribution:
+    defines: A distribution showing how many vertices in a (di)graph have each possible degree value,
+      often used to assess vertex importance.
+    composed_of:
+    - indegree_outdegree
+    tier: 3
+  adjacency_matrix_digraph:
+    defines: A matrix representation A of a digraph where A[i,j] counts arcs from vertex i to vertex j;
+      row sums give outdegree, column sums give indegree.
+    composed_of:
+    - directed_graph
+    tier: 1
+  incidence_matrix_digraph:
+    defines: A matrix M representing a digraph where M[i,j] is 1 if vertex i is the tail of arc j, -1
+      if it is the head, and 0 otherwise.
+    composed_of:
+    - directed_graph
+    tier: 1
+  directed_walks_paths_cycles:
+    defines: Sequences of vertices and arcs in a digraph, analogous to undirected walks/trails/paths/cycles
+      but following arc direction.
+    composed_of:
+    - directed_graph
+    tier: 1
+  strong_weak_connectivity:
+    defines: A digraph is strongly connected if a directed path exists between every pair of vertices,
+      and weakly connected if its underlying graph is connected.
+    composed_of:
+    - directed_walks_paths_cycles
+    - underlying_graph
+    tier: 2
+  directed_acyclic_graph:
+    defines: A weakly connected digraph containing no directed cycle, commonly used to express dependencies
+      between activities.
+    composed_of:
+    - strong_weak_connectivity
+    - directed_walks_paths_cycles
+    tier: 3
+  reachability_algorithm:
+    defines: A breadth-first procedure that iteratively expands the set of vertices reachable from a given
+      vertex u via out-neighbors until no new vertices are added.
+    composed_of:
+    - in_out_neighbor_sets
+    tier: 2
+  shortest_path_distance:
+    defines: The distance d(u,v) between two vertices is the minimal total weight among all (u,v)-paths,
+      and a path achieving it is a shortest path or geodesic.
+    composed_of:
+    - weighted_graph
+    tier: 1
+  dijkstras_algorithm:
+    defines: An algorithm that computes shortest paths from a source vertex u to all other vertices in
+      a nonnegative-weighted graph by iteratively growing a set of vertices with known shortest-path labels.
+    composed_of:
+    - shortest_path_distance
+    tier: 2
+  edge_chromatic_number:
+    defines: The minimal number of colors k for which a graph is k-edge colorable, denoted chi'(G).
+    composed_of:
+    - edge_coloring
+    tier: 1
+  vizings_theorem:
+    defines: For any simple graph G, the edge chromatic number chi'(G) equals either Delta(G) or Delta(G)+1,
+      where Delta(G) is the maximum vertex degree.
+    composed_of:
+    - edge_chromatic_number
+    tier: 2
+  chromatic_number:
+    defines: The minimal number of colors k for which a graph is k-vertex colorable, denoted chi(G).
+    composed_of:
+    - vertex_coloring
+    tier: 1
+  chromatic_number_degree_bound:
+    defines: For any simple connected graph G, the chromatic number satisfies chi(G) <= Delta(G) + 1.
+    composed_of:
+    - chromatic_number
+    tier: 2
+  five_color_theorem:
+    defines: Any planar graph can be vertex colored using at most five colors, proven via the existence
+      of a vertex with degree <=5 and induction.
+    composed_of:
+    - chromatic_number
+    tier: 2
+applications:
+  strongly_connected_orientation:
+    defines: A connected undirected graph G has a strongly connected orientation if and only if G is 2-edge-connected
+      (lambda(G) >= 2).
+    needs:
+    - orientation
+    - strong_weak_connectivity
+    tier: 3
+  communication_network_routing:
+    defines: Modeling communication and transportation networks as digraphs where strong connectivity
+      ensures any node can route to any other node.
+    needs:
+    - strong_weak_connectivity
+    tier: 2
+  storage_load_balancing:
+    defines: Modeling data block migrations between storage devices as arcs whose scheduling corresponds
+      to finding a minimal edge coloring.
+    needs:
+    - edge_chromatic_number
+    tier: 2
+  class_scheduling_application:
+    defines: Modeling classes as vertices connected by an edge when they share students, so the minimum
+      number of time slots equals the graph's chromatic number.
+    needs:
+    - chromatic_number
+    tier: 2
+  four_color_theorem:
+    defines: Any planar graph can be vertex colored using at most four colors, proven by Appel and Haken
+      via exhaustive computer case-checking.
+    needs:
+    - chromatic_number
+    tier: 2

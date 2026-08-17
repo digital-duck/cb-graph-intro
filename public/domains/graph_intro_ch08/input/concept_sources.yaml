@@ -1,0 +1,136 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch8
+sources:
+  social_network:
+    label: Social Network
+    sections:
+    - id: ch08_social_network_analysis_introduction
+      title: 'Social network analysis: introduction'
+  sociogram:
+    label: Sociogram
+    sections:
+    - id: ch08_social_network_analysis_introduction
+      title: 'Social network analysis: introduction'
+  homophily:
+    label: Homophily
+    sections:
+    - id: ch08_social_network_analysis_introduction
+      title: 'Social network analysis: introduction'
+  triad:
+    label: Triad
+    sections:
+    - id: ch08_social_network_analysis_introduction
+      title: 'Social network analysis: introduction'
+  betweenness_centrality:
+    label: Betweenness Centrality
+    sections:
+    - id: ch08_social_network_analysis_introduction
+      title: 'Social network analysis: introduction'
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  vertex_centrality:
+    label: Vertex Centrality
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  closeness:
+    label: Closeness
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  degree_prestige:
+    label: Degree Prestige
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  influence_domain:
+    label: Influence Domain
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  proximity_prestige:
+    label: Proximity Prestige
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  ranked_prestige:
+    label: Ranked Prestige
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  signed_graph:
+    label: Signed Graph
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  structural_balance:
+    label: Structural Balance
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  balanced_signed_graph:
+    label: Balanced Signed Graph
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  cohesive_subgroup:
+    label: Cohesive Subgroup
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  clique:
+    label: (Maximal) Clique
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  k_distance_clique:
+    label: k-Distance-Clique
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  k_clan:
+    label: k-Clan
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  k_club:
+    label: k-Club
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  k_core:
+    label: k-Core
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  clique_percolation:
+    label: Clique Percolation / k-Clique Community
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+  affiliation_network:
+    label: Affiliation Network
+    sections:
+    - id: ch08_some_basic_concepts
+      title: Some basic concepts
+    - id: ch08_equivalence
+      title: Equivalence
+  structural_equivalence:
+    label: Structural Equivalence
+    sections:
+    - id: ch08_equivalence
+      title: Equivalence
+  automorphism:
+    label: Automorphism
+    sections:
+    - id: ch08_equivalence
+      title: Equivalence
+  automorphic_equivalence:
+    label: Automorphic Equivalence
+    sections:
+    - id: ch08_equivalence
+      title: Equivalence
+  regular_equivalence:
+    label: Regular Equivalence
+    sections:
+    - id: ch08_equivalence
+      title: Equivalence
