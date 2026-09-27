@@ -60,3 +60,13 @@ npm run deploy      # vite build && gh-pages -d dist --no-history --dotfiles
 
 The backend API is a local tool and is not deployed; static graph navigators and any
 pre-generated concept books are baked into the build.
+
+
+## Generate content
+
+```bash
+conda activate spl123
+
+python3 scripts/batch_generate.py generate --domain graph_intro_ch01-graph_intro_ch08 --language en,zh --level college --llm claude_cli
+
+```
