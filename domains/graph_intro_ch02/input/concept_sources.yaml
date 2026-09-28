@@ -1,0 +1,137 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch2
+sources:
+  directed_graph:
+    label: Directed Graph (Digraph)
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  underlying_graph:
+    label: Underlying Graph
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  orientation:
+    label: Orientation
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  in_out_neighbor_sets:
+    label: In-Neighbor and Out-Neighbor Sets
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  indegree_outdegree:
+    label: Indegree and Outdegree
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  degree_distribution:
+    label: Degree Distribution
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  adjacency_matrix_digraph:
+    label: Adjacency Matrix (Digraph)
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  incidence_matrix_digraph:
+    label: Incidence Matrix (Digraph)
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  directed_walks_paths_cycles:
+    label: Directed Walks, Trails, Paths, and Cycles
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  strong_weak_connectivity:
+    label: Strong and Weak Connectivity
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  directed_acyclic_graph:
+    label: Directed Acyclic Graph (DAG)
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  reachability_algorithm:
+    label: Reachability Algorithm
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  strongly_connected_orientation:
+    label: Strongly Connected Orientation Theorem
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  communication_network_routing:
+    label: Communication/Transportation Network Routing
+    sections:
+    - id: ch02_directed_graphs
+      title: Directed graphs
+  weighted_graph:
+    label: Weighted Graph
+    sections:
+    - id: ch02_weighted_graphs
+      title: Weighted graphs
+  shortest_path_distance:
+    label: Shortest Path / Geodesic Distance
+    sections:
+    - id: ch02_weighted_graphs
+      title: Weighted graphs
+  dijkstras_algorithm:
+    label: Dijkstra's Algorithm
+    sections:
+    - id: ch02_weighted_graphs
+      title: Weighted graphs
+  edge_coloring:
+    label: Edge Coloring
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  edge_chromatic_number:
+    label: Edge Chromatic Number
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  vizings_theorem:
+    label: Vizing's Theorem
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  storage_load_balancing:
+    label: Storage Device Migration Scheduling
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  vertex_coloring:
+    label: Vertex Coloring
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  chromatic_number:
+    label: Chromatic Number
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  class_scheduling_application:
+    label: Class Scheduling via Vertex Coloring
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  chromatic_number_degree_bound:
+    label: Chromatic Number Degree Bound
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  four_color_theorem:
+    label: Four Color Theorem
+    sections:
+    - id: ch02_colorings
+      title: Colorings
+  five_color_theorem:
+    label: Five Color Theorem for Planar Graphs
+    sections:
+    - id: ch02_colorings
+      title: Colorings

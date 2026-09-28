@@ -1,0 +1,146 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch8
+primitives:
+  social_network:
+    defines: A graph representing social entities as nodes and specific relationships between them as
+      edges.
+    tier: 0
+  sociogram:
+    defines: A diagram representing individuals as points and relationships between them as lines, introduced
+      by Jacob Moreno to visualize social structure.
+    tier: 0
+  triad:
+    defines: A subgraph of a sociogram consisting of three points that may or may not be fully connected
+      to each other.
+    tier: 0
+  signed_graph:
+    defines: A simple graph in which each edge is labeled with a positive or negative sign representing
+      liking or disliking.
+    tier: 0
+  clique:
+    defines: A complete subgraph of at least three vertices that is not contained in a larger complete
+      subgraph.
+    tier: 0
+  automorphism:
+    defines: A nontrivial one-to-one mapping of a graph's vertices to itself that preserves all edges.
+    tier: 0
+concepts:
+  homophily:
+    defines: The tendency of people to maintain stronger relationships with those who are similar to themselves.
+    composed_of:
+    - social_network
+    tier: 1
+  betweenness_centrality:
+    defines: A metric that measures a vertex's importance by the fraction of shortest paths between other
+      vertex pairs that pass through it.
+    composed_of:
+    - social_network
+    tier: 1
+  vertex_centrality:
+    defines: A metric telling to what extent a vertex is at the center of a graph, based on its maximum
+      distance to all other vertices.
+    composed_of:
+    - social_network
+    tier: 1
+  closeness:
+    defines: A centrality metric based on the distance from a vertex to every other vertex in the graph.
+    composed_of:
+    - vertex_centrality
+    tier: 2
+  degree_prestige:
+    defines: A directed-graph prestige metric defined as the indegree of a vertex.
+    composed_of:
+    - social_network
+    tier: 1
+  influence_domain:
+    defines: The set of vertices from which a given vertex can be reached through a directed path.
+    composed_of:
+    - social_network
+    tier: 1
+  proximity_prestige:
+    defines: A prestige metric combining the fraction of vertices that can influence a vertex with their
+      average distance to it.
+    composed_of:
+    - influence_domain
+    - closeness
+    tier: 3
+  ranked_prestige:
+    defines: A prestige metric in which a vertex's importance depends recursively on the importance of
+      the vertices that nominate it, computed as an eigenvector of the weight matrix.
+    composed_of:
+    - degree_prestige
+    tier: 2
+  structural_balance:
+    defines: A theory examining whether the positive/negative sentiment relationships among group members
+      form a stable, balanced configuration.
+    composed_of:
+    - signed_graph
+    - triad
+    tier: 1
+  balanced_signed_graph:
+    defines: A signed graph in which all cycles are positive, equivalently one whose vertex set can be
+      partitioned into two subsets with only negative edges between them and only positive edges within
+      them.
+    composed_of:
+    - signed_graph
+    - structural_balance
+    tier: 2
+  cohesive_subgroup:
+    defines: A closely bound group of people within a social network, such as a family, friend group,
+      or clique.
+    composed_of:
+    - social_network
+    - clique
+    tier: 1
+  k_distance_clique:
+    defines: A maximal subgraph in which the distance between any two members, measured in the original
+      graph, is at most k.
+    composed_of:
+    - clique
+    tier: 1
+  k_clan:
+    defines: A k-distance-clique in which the distance between any two members, measured within the subgraph
+      itself, is also at most k.
+    composed_of:
+    - k_distance_clique
+    tier: 2
+  k_club:
+    defines: A maximal subgraph whose diameter is at most k.
+    composed_of:
+    - clique
+    tier: 1
+  k_core:
+    defines: A maximal subgraph in which every vertex has degree at least k within that subgraph.
+    composed_of:
+    - cohesive_subgroup
+    tier: 2
+  clique_percolation:
+    defines: A community-detection method that unions overlapping k-cliques sharing at least k-1 vertices
+      into a k-clique community.
+    composed_of:
+    - clique
+    tier: 1
+  structural_equivalence:
+    defines: Two vertices are structurally equivalent if they have exactly the same sets of in-neighbors
+      and out-neighbors.
+    composed_of:
+    - social_network
+    tier: 1
+  automorphic_equivalence:
+    defines: Two vertices are automorphically equivalent if there exists an automorphism of the graph
+      mapping one vertex to the other.
+    composed_of:
+    - automorphism
+    tier: 1
+  regular_equivalence:
+    defines: Two vertices are regularly equivalent if, for every neighbor of one, there is a neighbor
+      of the other that is also regularly equivalent, reflecting shared social roles.
+    composed_of:
+    - structural_equivalence
+    tier: 2
+applications:
+  affiliation_network:
+    defines: A two-mode bipartite network in which actors are linked to the events they participate in,
+      used to study indirect relationships between actors or events.
+    needs:
+    - social_network
+    tier: 1

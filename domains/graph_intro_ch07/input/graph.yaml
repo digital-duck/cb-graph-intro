@@ -1,0 +1,186 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch7
+primitives:
+  computer_network:
+    defines: A collection of computers (hosts) connected to each other so they can exchange data packets.
+    tier: 0
+  host:
+    defines: An individual networked computer or device that sends and receives packets within a network.
+    tier: 0
+  mac_address:
+    defines: A persistent, world-wide unique 48-bit identifier assigned to a host's network hardware,
+      used by switches to forward packets within a local-area network.
+    tier: 0
+  router:
+    defines: A network node that forwards packets toward their destination based on the network identifier
+      portion of an IP address.
+    tier: 0
+  partial_view:
+    defines: The list of other peers that a peer maintains for exchanging application data or view entries
+      in an overlay network.
+    tier: 0
+  world_wide_web:
+    defines: A distributed information system of Web pages connected by hyperlinks, built on top of the
+      Internet.
+    tier: 0
+  url:
+    defines: A reference used in a hyperlink to identify and locate a document on a Web server.
+    tier: 0
+  http:
+    defines: The standard communication protocol used by Web clients to request and retrieve pages from
+      Web servers.
+    tier: 0
+  scale_free_network:
+    defines: A network whose degree distribution follows a power law, featuring a few highly-connected
+      hub vertices.
+    tier: 0
+  small_world_network:
+    defines: A network characterized by short average path lengths combined with high clustering coefficient.
+    tier: 0
+  degree_distribution:
+    defines: The distribution describing how many vertices in a graph have a given degree (or indegree/outdegree
+      for directed graphs).
+    tier: 0
+  clustering_coefficient:
+    defines: A measure of the extent to which a vertex's neighbors are also connected to each other.
+    tier: 0
+  shortest_path_algorithm:
+    defines: An algorithm (e.g., Bellman-Ford) for finding the minimum-length path between vertices in
+      a graph, used for packet routing.
+    tier: 0
+concepts:
+  ip_address:
+    defines: An assignable 32-bit address, split into a network identifier and host identifier, used by
+      routers to route packets across a communication network.
+    composed_of:
+    - host
+    - router
+    tier: 1
+  local_area_network:
+    defines: A small-area network of computers connected by a switch, typically spanning at most a few
+      hundred meters.
+    composed_of:
+    - computer_network
+    - mac_address
+    tier: 1
+  internet_service_provider:
+    defines: An organization owning large-area networks (tier-1, tier-2, or tier-3) that provides access
+      to, and transit across, the Internet.
+    composed_of:
+    - computer_network
+    tier: 1
+  client_server_architecture:
+    defines: An application organization in which a server hosts the core application logic and clients
+      send requests to it and receive replies, representable as a star-shaped graph.
+    composed_of:
+    - computer_network
+    - host
+    tier: 1
+  overlay_network:
+    defines: A communication network formed among peers of a distributed application, each maintaining
+      a partial view of other peers, represented as a graph over the underlying Internet.
+    composed_of:
+    - partial_view
+    - computer_network
+    tier: 1
+  web_graph:
+    defines: A directed graph representation of the Web in which vertices are pages and arcs are hyperlinks
+      between them.
+    composed_of:
+    - world_wide_web
+    - url
+    - http
+    tier: 1
+  autonomous_system:
+    defines: A collection of networks managed under the same administration and routing policy, represented
+      as a vertex in the graph model of the Internet.
+    composed_of:
+    - internet_service_provider
+    - router
+    tier: 2
+  structured_overlay_network:
+    defines: An overlay network in which each peer's partial view contains references to specific, deterministically
+      chosen peers rather than random ones.
+    composed_of:
+    - overlay_network
+    tier: 2
+  random_overlay_network:
+    defines: An overlay network in which peers' partial views are kept close to uniformly random, typically
+      maintained via gossiping/epidemic protocols.
+    composed_of:
+    - overlay_network
+    tier: 2
+  web_crawler:
+    defines: A program that automatically fetches Web pages starting from seed pages, extracting and following
+      references to discover the Web graph's structure.
+    composed_of:
+    - web_graph
+    tier: 2
+  peering_relationship:
+    defines: A direct link between border gateway routers of two networks that allows traffic to flow
+      between them.
+    composed_of:
+    - autonomous_system
+    - router
+    tier: 3
+  border_gateway_protocol:
+    defines: The routing protocol used by autonomous systems to discover and advertise paths to networks,
+      based on the Bellman-Ford algorithm but advertising full paths.
+    composed_of:
+    - autonomous_system
+    - shortest_path_algorithm
+    tier: 3
+  successor:
+    defines: In Chord, the peer with the smallest identifier greater than or equal to a given key k, responsible
+      for storing that key's data.
+    composed_of:
+    - structured_overlay_network
+    tier: 3
+  epidemic_protocol:
+    defines: A decentralized protocol in which a peer periodically exchanges data or view entries with
+      another uniformly-at-random chosen peer, disseminating updates across the network.
+    composed_of:
+    - random_overlay_network
+    tier: 3
+  finger_table:
+    defines: A Chord peer's partial view consisting of shortcut references to successor peers at exponentially
+      increasing distances, enabling logarithmic-time lookups.
+    composed_of:
+    - successor
+    tier: 4
+applications:
+  as_topology:
+    defines: The graph structure of the Internet formed by autonomous systems as vertices and their peering
+      relationships as edges, empirically found to be scale-free and small-world.
+    needs:
+    - autonomous_system
+    - peering_relationship
+    - scale_free_network
+    - small_world_network
+    tier: 4
+  chord:
+    defines: A structured peer-to-peer network organized as a ring of m-bit identifiers, where each key
+      is stored at the peer with the smallest identifier greater than or equal to it.
+    needs:
+    - structured_overlay_network
+    - successor
+    - finger_table
+    tier: 5
+  newscast:
+    defines: An epidemic-based unstructured peer-to-peer protocol in which peers randomly exchange and
+      shrink partial view entries, producing a graph resembling an Erdos-Renyi random graph.
+    needs:
+    - epidemic_protocol
+    - partial_view
+    tier: 4
+  bowtie_structure:
+    defines: A macroscopic model of the Web graph dividing pages into SCC, IN, OUT, tendrils/tubes, and
+      disconnected components based on directed reachability.
+    needs:
+    - web_graph
+    tier: 2
+  pagerank:
+    defines: A recursive algorithm that ranks a Web page's importance based on the ranks of pages linking
+      to it, weighted by a damping factor.
+    needs:
+    - web_graph
+    tier: 2

@@ -1,0 +1,1413 @@
+# Book-level super-graph — AUTO-GENERATED, do not edit by hand.
+# Run:  python scripts/build_super_graph.py
+#
+# Merges all chapter graphs; each node carries source_domain (canonical
+# definition) and optionally also_in (other chapters that reuse it).
+# Cross-domain primitives (concepts in an earlier chapter re-declared as
+# primitives in a later one) appear here with their full composed_of chain.
+# This file is never used for SPL generation — it exists for validation
+# and future book-level graph visualisation.
+domain: graph_intro
+chapters:
+- graph_intro_ch01
+- graph_intro_ch02
+- graph_intro_ch03
+- graph_intro_ch04
+- graph_intro_ch05
+- graph_intro_ch06
+- graph_intro_ch07
+- graph_intro_ch08
+primitives:
+  graph:
+    defines: A collection of vertices V and edges E, written G = (V, E), where each
+      edge joins exactly two vertices.
+    tier: 0
+    source_domain: graph_intro_ch01
+  directed_graph:
+    defines: A digraph D = (V, A) consists of vertices and arcs, where each arc <u,v>
+      joins a tail vertex u to a head vertex v.
+    tier: 0
+    source_domain: graph_intro_ch02
+  weighted_graph:
+    defines: A graph in which each edge e has an associated real-valued weight w(e),
+      with subgraph weight defined as the sum of its edge weights.
+    tier: 0
+    source_domain: graph_intro_ch02
+    also_in:
+    - graph_intro_ch03
+    - graph_intro_ch04
+  edge_coloring:
+    defines: An assignment of colors to the edges of a graph such that edges incident
+      to the same vertex receive different colors.
+    tier: 0
+    source_domain: graph_intro_ch02
+  vertex_coloring:
+    defines: An assignment of colors to the vertices of a graph such that no two adjacent
+      vertices share the same color.
+    tier: 0
+    source_domain: graph_intro_ch02
+  walk:
+    defines: An alternating sequence of vertices and edges connecting a starting vertex
+      to an ending vertex, as introduced in earlier chapters.
+    tier: 0
+    source_domain: graph_intro_ch03
+  degree:
+    defines: The number of edges incident to a vertex, used here to determine odd/even
+      parity for traversal theorems.
+    tier: 0
+    source_domain: graph_intro_ch03
+  connected_graph:
+    defines: A graph in which every pair of vertices is joined by a path, assumed
+      as a precondition for the traversal theorems in this chapter.
+    tier: 0
+    source_domain: graph_intro_ch03
+    also_in:
+    - graph_intro_ch04
+  cycle:
+    defines: A closed path in a graph that returns to its starting vertex without
+      repeating edges.
+    tier: 0
+    source_domain: graph_intro_ch04
+  big_o_notation:
+    defines: A mathematical notation used to describe the asymptotic growth rate of
+      a function, used to compare algorithmic performance.
+    tier: 0
+    source_domain: graph_intro_ch04
+  adjacency_matrix:
+    defines: A matrix A where A[i,j]=1 if an edge joins vertices vi and vj, and 0
+      otherwise, used to elegantly express network metrics.
+    tier: 0
+    source_domain: graph_intro_ch05
+  correlation_coefficient:
+    defines: A statistical measure r(x,y) of the extent to which a change in one variable
+      is associated with a change in another.
+    tier: 0
+    source_domain: graph_intro_ch05
+  shortest_path:
+    defines: A path of minimal length (or minimal weight) between two vertices, computable
+      via algorithms such as Dijkstra's.
+    tier: 0
+    source_domain: graph_intro_ch05
+  triangle:
+    defines: A complete subgraph of exactly three vertices, including a given vertex
+      v.
+    tier: 0
+    source_domain: graph_intro_ch05
+  triple:
+    defines: A subgraph of exactly three vertices and two edges, where a given vertex
+      v is incident with both edges.
+    tier: 0
+    source_domain: graph_intro_ch05
+  random_variable:
+    defines: A variable whose possible values each occur with a certain probability,
+      restricted here to the discrete case.
+    tier: 0
+    source_domain: graph_intro_ch06
+  expected_value:
+    defines: The weighted average of a random variable's possible values, weighted
+      by their probabilities.
+    tier: 0
+    source_domain: graph_intro_ch06
+  er_random_graph:
+    defines: An undirected graph on n vertices, denoted ER(n,p), in which each pair
+      of distinct vertices is connected by an edge independently with probability
+      p.
+    tier: 0
+    source_domain: graph_intro_ch06
+  small_world_phenomenon:
+    defines: The empirical observation that most pairs of people/nodes in a social
+      network are connected by surprisingly short chains of acquaintance.
+    tier: 0
+    source_domain: graph_intro_ch06
+  power_law_distribution:
+    defines: A distribution where a quantity's probability is proportional to a negative
+      power of its value, exhibiting scale-invariance under rescaling of x.
+    tier: 0
+    source_domain: graph_intro_ch06
+  computer_network:
+    defines: A collection of computers (hosts) connected to each other so they can
+      exchange data packets.
+    tier: 0
+    source_domain: graph_intro_ch07
+  host:
+    defines: An individual networked computer or device that sends and receives packets
+      within a network.
+    tier: 0
+    source_domain: graph_intro_ch07
+  mac_address:
+    defines: A persistent, world-wide unique 48-bit identifier assigned to a host's
+      network hardware, used by switches to forward packets within a local-area network.
+    tier: 0
+    source_domain: graph_intro_ch07
+  router:
+    defines: A network node that forwards packets toward their destination based on
+      the network identifier portion of an IP address.
+    tier: 0
+    source_domain: graph_intro_ch07
+  partial_view:
+    defines: The list of other peers that a peer maintains for exchanging application
+      data or view entries in an overlay network.
+    tier: 0
+    source_domain: graph_intro_ch07
+  world_wide_web:
+    defines: A distributed information system of Web pages connected by hyperlinks,
+      built on top of the Internet.
+    tier: 0
+    source_domain: graph_intro_ch07
+  url:
+    defines: A reference used in a hyperlink to identify and locate a document on
+      a Web server.
+    tier: 0
+    source_domain: graph_intro_ch07
+  http:
+    defines: The standard communication protocol used by Web clients to request and
+      retrieve pages from Web servers.
+    tier: 0
+    source_domain: graph_intro_ch07
+  small_world_network:
+    defines: A network characterized by short average path lengths combined with high
+      clustering coefficient.
+    tier: 0
+    source_domain: graph_intro_ch07
+  shortest_path_algorithm:
+    defines: An algorithm (e.g., Bellman-Ford) for finding the minimum-length path
+      between vertices in a graph, used for packet routing.
+    tier: 0
+    source_domain: graph_intro_ch07
+  social_network:
+    defines: A graph representing social entities as nodes and specific relationships
+      between them as edges.
+    tier: 0
+    source_domain: graph_intro_ch08
+  sociogram:
+    defines: A diagram representing individuals as points and relationships between
+      them as lines, introduced by Jacob Moreno to visualize social structure.
+    tier: 0
+    source_domain: graph_intro_ch08
+  triad:
+    defines: A subgraph of a sociogram consisting of three points that may or may
+      not be fully connected to each other.
+    tier: 0
+    source_domain: graph_intro_ch08
+  signed_graph:
+    defines: A simple graph in which each edge is labeled with a positive or negative
+      sign representing liking or disliking.
+    tier: 0
+    source_domain: graph_intro_ch08
+  clique:
+    defines: A complete subgraph of at least three vertices that is not contained
+      in a larger complete subgraph.
+    tier: 0
+    source_domain: graph_intro_ch08
+  automorphism:
+    defines: A nontrivial one-to-one mapping of a graph's vertices to itself that
+      preserves all edges.
+    tier: 0
+    source_domain: graph_intro_ch08
+concepts:
+  vertex_adjacency:
+    defines: Two vertices joined by an edge are adjacent; the neighbor set N(v) is
+      the collection of vertices adjacent to v.
+    composed_of:
+    - graph
+    tier: 1
+    source_domain: graph_intro_ch01
+  vertex_degree:
+    defines: The number of edges incident with a vertex v, denoted δ(v), with loops
+      counted twice.
+    composed_of:
+    - graph
+    tier: 1
+    source_domain: graph_intro_ch01
+    also_in:
+    - graph_intro_ch05
+  subgraph:
+    defines: A graph H is a subgraph of G if its vertex and edge sets are subsets
+      of G's, with edge endpoints preserved.
+    composed_of:
+    - graph
+    tier: 1
+    source_domain: graph_intro_ch01
+  walk_trail_path_cycle:
+    defines: An alternating sequence of vertices and edges (walk); a trail has distinct
+      edges, a path has distinct vertices, and a cycle is a closed trail with distinct
+      internal vertices.
+    composed_of:
+    - graph
+    tier: 1
+    source_domain: graph_intro_ch01
+  bipartite_graph:
+    defines: A graph whose vertices can be partitioned into two disjoint sets such
+      that every edge joins vertices from different sets.
+    composed_of:
+    - graph
+    tier: 1
+    source_domain: graph_intro_ch01
+  handshake_theorem:
+    defines: For any graph, the sum of all vertex degrees equals twice the number
+      of edges, and the number of odd-degree vertices is even.
+    composed_of:
+    - vertex_degree
+    tier: 2
+    source_domain: graph_intro_ch01
+  degree_sequence:
+    defines: The list of vertex degrees of a graph, typically ordered in descending
+      order.
+    composed_of:
+    - vertex_degree
+    tier: 2
+    source_domain: graph_intro_ch01
+  regular_graph:
+    defines: A graph in which every vertex has the same degree k, called k-regular
+      (3-regular graphs are cubic).
+    composed_of:
+    - vertex_degree
+    tier: 2
+    source_domain: graph_intro_ch01
+  induced_subgraph:
+    defines: The subgraph obtained from a subset of vertices (or edges) of G by including
+      all edges (or endpoints) from G consistent with that subset.
+    composed_of:
+    - subgraph
+    tier: 2
+    source_domain: graph_intro_ch01
+  line_graph:
+    defines: A graph L(G) constructed by representing each edge of G as a vertex,
+      joining two such vertices when their original edges share an endpoint in G.
+    composed_of:
+    - graph
+    - vertex_adjacency
+    tier: 2
+    source_domain: graph_intro_ch01
+  graph_isomorphism:
+    defines: Two graphs are isomorphic if there is a one-to-one vertex mapping preserving
+      edge adjacency, meaning they are structurally the same graph.
+    composed_of:
+    - vertex_adjacency
+    tier: 2
+    source_domain: graph_intro_ch01
+  connectedness:
+    defines: A graph is connected if every pair of distinct vertices is joined by
+      a path; otherwise it decomposes into components.
+    composed_of:
+    - walk_trail_path_cycle
+    tier: 2
+    source_domain: graph_intro_ch01
+  path_independence:
+    defines: A collection of paths between two vertices that share only endpoints
+      (vertex independent) or share no edges (edge independent).
+    composed_of:
+    - walk_trail_path_cycle
+    tier: 2
+    source_domain: graph_intro_ch01
+  planar_graph:
+    defines: A graph that can be drawn (embedded) in the plane such that no two edges
+      intersect, forming a plane graph with regions/faces.
+    composed_of:
+    - graph_embedding
+    tier: 2
+    source_domain: graph_intro_ch01
+  graphic_sequence_havel_hakimi:
+    defines: A criterion (and recursive construction) for determining whether a given
+      list of numbers corresponds to the degree sequence of some simple graph.
+    composed_of:
+    - degree_sequence
+    tier: 3
+    source_domain: graph_intro_ch01
+  graph_component:
+    defines: A maximal connected subgraph of G.
+    composed_of:
+    - connectedness
+    tier: 3
+    source_domain: graph_intro_ch01
+  vertex_edge_cut:
+    defines: A set of vertices (or edges) whose removal increases the number of components
+      of a graph; single-element cuts are cut vertices/edges.
+    composed_of:
+    - connectedness
+    tier: 3
+    source_domain: graph_intro_ch01
+  tree:
+    defines: A simple, connected, acyclic graph; a forest is a simple graph whose
+      components are all trees. A tree with n vertices has n-1 edges.
+    composed_of:
+    - connectedness
+    - walk_trail_path_cycle
+    tier: 3
+    source_domain: graph_intro_ch01
+    also_in:
+    - graph_intro_ch04
+  eulers_formula:
+    defines: For a plane graph with n vertices, m edges, and r regions, n − m + r
+      = 2.
+    composed_of:
+    - planar_graph
+    tier: 3
+    source_domain: graph_intro_ch01
+  connectivity_numbers:
+    defines: The minimum size of a vertex cut (κ) or edge cut (λ) of a connected graph,
+      satisfying κ(G) ≤ λ(G) ≤ minimum vertex degree.
+    composed_of:
+    - vertex_edge_cut
+    - vertex_degree
+    tier: 4
+    source_domain: graph_intro_ch01
+  planarity_bounds:
+    defines: Necessary conditions for planarity (e.g., m ≤ 3n − 6) used to prove that
+      K5 and K3,3 are nonplanar, and that any graph containing them as a subgraph
+      is nonplanar.
+    composed_of:
+    - eulers_formula
+    - bipartite_graph
+    tier: 4
+    source_domain: graph_intro_ch01
+  mengers_theorem:
+    defines: The minimum vertex (edge) cut size separating two nonadjacent vertices
+      equals the maximum number of pairwise vertex- (edge-) independent paths between
+      them.
+    composed_of:
+    - connectivity_numbers
+    - path_independence
+    tier: 5
+    source_domain: graph_intro_ch01
+  underlying_graph:
+    defines: The undirected graph G(D) obtained from a digraph D by replacing each
+      arc with its undirected counterpart.
+    composed_of:
+    - directed_graph
+    tier: 1
+    source_domain: graph_intro_ch02
+  orientation:
+    defines: A digraph D(G) obtained from an undirected graph G by assigning a direction
+      to each edge.
+    composed_of:
+    - directed_graph
+    tier: 1
+    source_domain: graph_intro_ch02
+  in_out_neighbor_sets:
+    defines: For a vertex v in a digraph, the in-neighbor set consists of vertices
+      with an arc pointing to v, and the out-neighbor set consists of vertices v points
+      to.
+    composed_of:
+    - directed_graph
+    tier: 1
+    source_domain: graph_intro_ch02
+  indegree_outdegree:
+    defines: The indegree of a vertex is the number of arcs with that vertex as head;
+      the outdegree is the number of arcs with that vertex as tail.
+    composed_of:
+    - in_out_neighbor_sets
+    tier: 2
+    source_domain: graph_intro_ch02
+  degree_distribution:
+    defines: A distribution showing how many vertices in a (di)graph have each possible
+      degree value, often used to assess vertex importance.
+    composed_of:
+    - indegree_outdegree
+    tier: 3
+    source_domain: graph_intro_ch02
+    also_in:
+    - graph_intro_ch05
+    - graph_intro_ch06
+    - graph_intro_ch07
+  adjacency_matrix_digraph:
+    defines: A matrix representation A of a digraph where A[i,j] counts arcs from
+      vertex i to vertex j; row sums give outdegree, column sums give indegree.
+    composed_of:
+    - directed_graph
+    tier: 1
+    source_domain: graph_intro_ch02
+  incidence_matrix_digraph:
+    defines: A matrix M representing a digraph where M[i,j] is 1 if vertex i is the
+      tail of arc j, -1 if it is the head, and 0 otherwise.
+    composed_of:
+    - directed_graph
+    tier: 1
+    source_domain: graph_intro_ch02
+  directed_walks_paths_cycles:
+    defines: Sequences of vertices and arcs in a digraph, analogous to undirected
+      walks/trails/paths/cycles but following arc direction.
+    composed_of:
+    - directed_graph
+    tier: 1
+    source_domain: graph_intro_ch02
+  strong_weak_connectivity:
+    defines: A digraph is strongly connected if a directed path exists between every
+      pair of vertices, and weakly connected if its underlying graph is connected.
+    composed_of:
+    - directed_walks_paths_cycles
+    - underlying_graph
+    tier: 2
+    source_domain: graph_intro_ch02
+  directed_acyclic_graph:
+    defines: A weakly connected digraph containing no directed cycle, commonly used
+      to express dependencies between activities.
+    composed_of:
+    - strong_weak_connectivity
+    - directed_walks_paths_cycles
+    tier: 3
+    source_domain: graph_intro_ch02
+  reachability_algorithm:
+    defines: A breadth-first procedure that iteratively expands the set of vertices
+      reachable from a given vertex u via out-neighbors until no new vertices are
+      added.
+    composed_of:
+    - in_out_neighbor_sets
+    tier: 2
+    source_domain: graph_intro_ch02
+  shortest_path_distance:
+    defines: The distance d(u,v) between two vertices is the minimal total weight
+      among all (u,v)-paths, and a path achieving it is a shortest path or geodesic.
+    composed_of:
+    - weighted_graph
+    tier: 1
+    source_domain: graph_intro_ch02
+  dijkstras_algorithm:
+    defines: An algorithm that computes shortest paths from a source vertex u to all
+      other vertices in a nonnegative-weighted graph by iteratively growing a set
+      of vertices with known shortest-path labels.
+    composed_of:
+    - shortest_path_distance
+    tier: 2
+    source_domain: graph_intro_ch02
+  edge_chromatic_number:
+    defines: The minimal number of colors k for which a graph is k-edge colorable,
+      denoted chi'(G).
+    composed_of:
+    - edge_coloring
+    tier: 1
+    source_domain: graph_intro_ch02
+  vizings_theorem:
+    defines: For any simple graph G, the edge chromatic number chi'(G) equals either
+      Delta(G) or Delta(G)+1, where Delta(G) is the maximum vertex degree.
+    composed_of:
+    - edge_chromatic_number
+    tier: 2
+    source_domain: graph_intro_ch02
+  chromatic_number:
+    defines: The minimal number of colors k for which a graph is k-vertex colorable,
+      denoted chi(G).
+    composed_of:
+    - vertex_coloring
+    tier: 1
+    source_domain: graph_intro_ch02
+  chromatic_number_degree_bound:
+    defines: For any simple connected graph G, the chromatic number satisfies chi(G)
+      <= Delta(G) + 1.
+    composed_of:
+    - chromatic_number
+    tier: 2
+    source_domain: graph_intro_ch02
+  five_color_theorem:
+    defines: Any planar graph can be vertex colored using at most five colors, proven
+      via the existence of a vertex with degree <=5 and induction.
+    composed_of:
+    - chromatic_number
+    tier: 2
+    source_domain: graph_intro_ch02
+  tour:
+    defines: A closed (u,v)-walk with u = v that traverses every edge of a graph.
+    composed_of:
+    - walk
+    tier: 1
+    source_domain: graph_intro_ch03
+  euler_trail:
+    defines: A (u,v)-trail traversing every edge of a connected graph exactly once,
+      which exists iff the graph has exactly two vertices of odd degree, originating
+      and ending at those vertices.
+    composed_of:
+    - walk
+    - degree
+    - connected_graph
+    tier: 1
+    source_domain: graph_intro_ch03
+  matching:
+    defines: A subset of a graph's edges such that no two edges share an incident
+      vertex, used to solve the edge-duplication step of the Chinese postman problem.
+    composed_of:
+    - connected_graph
+    tier: 1
+    source_domain: graph_intro_ch03
+  hamilton_path:
+    defines: A path in a connected graph that contains every vertex of the graph exactly
+      once.
+    composed_of:
+    - walk
+    - connected_graph
+    tier: 1
+    source_domain: graph_intro_ch03
+  graph_closure:
+    defines: The graph obtained by iteratively joining nonadjacent vertex pairs whose
+      degree sum is at least n, until no such pair remains.
+    composed_of:
+    - degree
+    - connected_graph
+    tier: 1
+    source_domain: graph_intro_ch03
+  euler_tour:
+    defines: A tour in which every edge of the graph is traversed exactly once; exists
+      in a connected graph iff no vertex has odd degree.
+    composed_of:
+    - tour
+    - degree
+    - connected_graph
+    tier: 2
+    source_domain: graph_intro_ch03
+  perfect_matching:
+    defines: A matching in which every vertex of the graph is incident with an edge
+      of the matching.
+    composed_of:
+    - matching
+    - degree
+    tier: 2
+    source_domain: graph_intro_ch03
+  hamilton_cycle:
+    defines: A cycle in a connected graph that contains every vertex of the graph
+      exactly once.
+    composed_of:
+    - hamilton_path
+    tier: 2
+    source_domain: graph_intro_ch03
+  rotational_transformation:
+    defines: A technique for converting one path into an alternative path of the same
+      length by reversing a segment via a shortcut edge, used within Posa's algorithm.
+    composed_of:
+    - hamilton_path
+    tier: 2
+    source_domain: graph_intro_ch03
+  fleurys_algorithm:
+    defines: A constructive algorithm for finding an Euler tour in an Eulerian graph
+      by repeatedly choosing edges that are not cut edges unless no alternative exists.
+    composed_of:
+    - euler_tour
+    - connected_graph
+    tier: 3
+    source_domain: graph_intro_ch03
+  hamiltonian_graph:
+    defines: A graph that contains at least one Hamilton cycle.
+    composed_of:
+    - hamilton_cycle
+    tier: 3
+    source_domain: graph_intro_ch03
+  posa_algorithm:
+    defines: A trial-and-error algorithm for finding a Hamilton cycle in a graph by
+      iteratively extending a path and applying rotational transformations when direct
+      extension is blocked.
+    composed_of:
+    - hamilton_path
+    - rotational_transformation
+    tier: 3
+    source_domain: graph_intro_ch03
+  optimal_hamilton_cycle:
+    defines: A Hamilton cycle in a weighted (typically complete) graph whose total
+      edge weight is minimal, found by iteratively swapping edge pairs to reduce total
+      weight.
+    composed_of:
+    - hamilton_cycle
+    - weighted_graph
+    tier: 3
+    source_domain: graph_intro_ch03
+  dirac_theorem:
+    defines: A sufficient condition stating that a simple graph with n≥3 vertices
+      is Hamiltonian if every vertex has degree at least n/2.
+    composed_of:
+    - hamiltonian_graph
+    - degree
+    tier: 4
+    source_domain: graph_intro_ch03
+  bondy_chvatal_theorem:
+    defines: A theorem stating that a simple graph is Hamiltonian if and only if its
+      closure is Hamiltonian.
+    composed_of:
+    - graph_closure
+    - hamiltonian_graph
+    tier: 4
+    source_domain: graph_intro_ch03
+  directed_hamiltonian_transformation:
+    defines: A construction that converts a directed Hamiltonian graph into an equivalent
+      undirected graph (via in/out vertex triplets) so that undirected Hamilton cycle
+      techniques can be applied to directed traveling salesman problems.
+    composed_of:
+    - hamiltonian_graph
+    tier: 4
+    source_domain: graph_intro_ch03
+  ore_theorem:
+    defines: A generalization of Dirac's theorem stating that for nonadjacent vertices
+      u, v with degree sum at least n, G is Hamiltonian iff G plus the edge (u,v)
+      is Hamiltonian.
+    composed_of:
+    - dirac_theorem
+    - degree
+    tier: 5
+    source_domain: graph_intro_ch03
+  rooted_tree:
+    defines: A tree with a single vertex designated as the root, used to represent
+      hierarchical data such as arithmetic expressions.
+    composed_of:
+    - tree
+    tier: 1
+    source_domain: graph_intro_ch04
+  binary_tree:
+    defines: A rooted tree in which every intermediate node has exactly two descendants,
+      used for efficient lookup in ordered sets.
+    composed_of:
+    - rooted_tree
+    tier: 2
+    source_domain: graph_intro_ch04
+  cut_edge:
+    defines: An edge whose removal disconnects a graph; equivalently, an edge that
+      is not part of any cycle.
+    composed_of:
+    - cycle
+    - connected_graph
+    tier: 1
+    source_domain: graph_intro_ch04
+  tree_characterizations:
+    defines: A set of equivalent conditions (n = m+1, unique paths between vertices,
+      every edge a cut edge, etc.) that identify when a connected graph is a tree.
+    composed_of:
+    - tree
+    - cut_edge
+    - connected_graph
+    tier: 2
+    source_domain: graph_intro_ch04
+  spanning_tree:
+    defines: An acyclic connected subgraph of a graph G that contains all of G's vertices.
+    composed_of:
+    - tree
+    - connected_graph
+    tier: 1
+    source_domain: graph_intro_ch04
+  minimum_spanning_tree:
+    defines: A spanning tree of a weighted connected graph whose total edge weight
+      is minimal among all spanning trees.
+    composed_of:
+    - spanning_tree
+    - weighted_graph
+    tier: 2
+    source_domain: graph_intro_ch04
+  routing_protocol:
+    defines: A collection of specifications describing how a node in a communication
+      network forwards a message toward its destination.
+    composed_of:
+    - connected_graph
+    tier: 1
+    source_domain: graph_intro_ch04
+  sink_tree:
+    defines: A spanning tree rooted at a destination node u, along which all messages
+      destined for u are routed.
+    composed_of:
+    - spanning_tree
+    - routing_protocol
+    tier: 2
+    source_domain: graph_intro_ch04
+  degree_correlation:
+    defines: The correlation coefficient applied to the degrees of adjacent vertices,
+      indicating whether similar-degree vertices tend to be joined (assortative) or
+      not (disassortative).
+    composed_of:
+    - vertex_degree
+    - correlation_coefficient
+    tier: 1
+    source_domain: graph_intro_ch05
+  scale_freeness:
+    defines: A metric s(G) summing the products of degrees of adjacent vertex pairs,
+      maximal when high-degree hubs are connected to each other; normalized as S(G)
+      relative to the maximum over all graphs with the same degree sequence.
+    composed_of:
+    - vertex_degree
+    tier: 1
+    source_domain: graph_intro_ch05
+  geodesic_distance:
+    defines: The length of a shortest path between two vertices u and v, denoted d(u,v).
+    composed_of:
+    - shortest_path
+    tier: 1
+    source_domain: graph_intro_ch05
+  eccentricity:
+    defines: The maximum distance from a vertex u to any other vertex in the graph,
+      ϵ(u) = max{d(u,v)}.
+    composed_of:
+    - geodesic_distance
+    tier: 2
+    source_domain: graph_intro_ch05
+  radius:
+    defines: The minimum eccentricity over all vertices in a graph, indicating how
+      disseparate the vertices are.
+    composed_of:
+    - eccentricity
+    tier: 3
+    source_domain: graph_intro_ch05
+  diameter:
+    defines: The maximal shortest-path distance between any two vertices in a graph.
+    composed_of:
+    - geodesic_distance
+    tier: 2
+    source_domain: graph_intro_ch05
+  average_path_length:
+    defines: The average of the shortest-path distances between all pairs of vertices
+      in a connected graph.
+    composed_of:
+    - geodesic_distance
+    tier: 2
+    source_domain: graph_intro_ch05
+    also_in:
+    - graph_intro_ch06
+  characteristic_path_length:
+    defines: The median over all per-vertex average distances d(u), used as an efficient-to-compute
+      proxy for the average path length in large graphs.
+    composed_of:
+    - average_path_length
+    tier: 3
+    source_domain: graph_intro_ch05
+  clustering_coefficient:
+    defines: For a vertex v, the ratio of actual edges among v's neighbors to the
+      maximum possible number of such edges; averaged over all vertices to give the
+      clustering coefficient of a graph.
+    composed_of:
+    - triangle
+    - triple
+    tier: 1
+    source_domain: graph_intro_ch05
+    also_in:
+    - graph_intro_ch07
+  vertex_strength:
+    defines: In a weighted graph, the total sum of the weights of edges incident with
+      a vertex, a weighted generalization of vertex degree.
+    composed_of:
+    - vertex_degree
+    tier: 1
+    source_domain: graph_intro_ch05
+  weighted_clustering_coefficient:
+    defines: A clustering coefficient variant for weighted graphs that weighs closed
+      triangles at a vertex by the edge weights, normalized by vertex strength.
+    composed_of:
+    - clustering_coefficient
+    - vertex_strength
+    tier: 2
+    source_domain: graph_intro_ch05
+  network_transitivity:
+    defines: The ratio of the number of triangles to the number of triples in a graph,
+      giving a global (whole-network) view of clustering, extendable to weighted and
+      directed graphs.
+    composed_of:
+    - triangle
+    - triple
+    tier: 1
+    source_domain: graph_intro_ch05
+  network_density:
+    defines: The ratio of the actual number of edges in a graph to the maximum possible
+      number of edges, ρ(G) = m/(n choose 2).
+    composed_of:
+    - vertex_degree
+    tier: 1
+    source_domain: graph_intro_ch05
+  centrality:
+    defines: A general concept for quantifying the relative importance of a vertex
+      in a network, with several formal notions depending on context.
+    composed_of:
+    - vertex_degree
+    - geodesic_distance
+    tier: 2
+    source_domain: graph_intro_ch05
+  center_of_graph:
+    defines: The set of vertices whose eccentricity equals the radius of the graph,
+      i.e., the vertices at minimal distance from all others.
+    composed_of:
+    - eccentricity
+    - radius
+    tier: 4
+    source_domain: graph_intro_ch05
+  eccentricity_centrality:
+    defines: The centrality of a vertex u defined as the reciprocal of its eccentricity,
+      1/ϵ(u).
+    composed_of:
+    - centrality
+    - eccentricity
+    tier: 3
+    source_domain: graph_intro_ch05
+  closeness_centrality:
+    defines: The centrality of a vertex u defined as the reciprocal of the sum of
+      its distances to all other vertices, indicating how close u is to the rest of
+      the network.
+    composed_of:
+    - centrality
+    - geodesic_distance
+    tier: 3
+    source_domain: graph_intro_ch05
+  betweenness_centrality:
+    defines: The centrality of a vertex u based on the fraction of shortest paths
+      between other vertex pairs that pass through u.
+    composed_of:
+    - centrality
+    - shortest_path
+    tier: 3
+    source_domain: graph_intro_ch05
+    also_in:
+    - graph_intro_ch08
+  expected_vertex_degree:
+    defines: The mean degree of a vertex in an ER(n,p) graph, proven to equal p(n-1).
+    composed_of:
+    - er_random_graph
+    - expected_value
+    tier: 1
+    source_domain: graph_intro_ch06
+  clustering_coefficient_random_graphs:
+    defines: The expected fraction of a vertex's neighbors that are themselves connected;
+      for ER(n,p) this equals p exactly.
+    composed_of:
+    - er_random_graph
+    tier: 1
+    source_domain: graph_intro_ch06
+  giant_component:
+    defines: The single large connected component that emerges and dominates a random
+      graph once the connection probability p exceeds a threshold.
+    composed_of:
+    - er_random_graph
+    - expected_vertex_degree
+    tier: 2
+    source_domain: graph_intro_ch06
+  scale_free_network:
+    defines: A network whose vertex degree distribution follows a power law, P[k]
+      ∝ k^(-α), typically with 2 < α < 3.
+    composed_of:
+    - power_law_distribution
+    - degree_distribution
+    tier: 2
+    source_domain: graph_intro_ch06
+    also_in:
+    - graph_intro_ch07
+  watts_strogatz_graph:
+    defines: A graph model, denoted WS(n,k,p), built by ring-lattice construction
+      with k neighbors per vertex followed by random rewiring of edges with probability
+      p, combining high clustering with short path lengths.
+    composed_of:
+    - small_world_phenomenon
+    - clustering_coefficient_random_graphs
+    - average_path_length
+    tier: 3
+    source_domain: graph_intro_ch06
+  hub_node:
+    defines: A high-degree vertex characteristic of scale-free networks that acts
+      as an intermediate connector between many other, less-connected vertices.
+    composed_of:
+    - scale_free_network
+    tier: 3
+    source_domain: graph_intro_ch06
+  preferential_attachment:
+    defines: A growth mechanism in which new vertices connect to existing vertices
+      with probability proportional to the existing vertex's current degree, producing
+      scale-free structure.
+    composed_of:
+    - scale_free_network
+    - degree_distribution
+    tier: 3
+    source_domain: graph_intro_ch06
+  weak_ties:
+    defines: Rewired long-range links in a small-world network that connect otherwise
+      distant communities and play a crucial structural role.
+    composed_of:
+    - watts_strogatz_graph
+    tier: 4
+    source_domain: graph_intro_ch06
+  barabasi_albert_graph:
+    defines: A scale-free graph, denoted BA(n, n0, m), constructed by iteratively
+      growing a network and attaching each new vertex's m edges via preferential attachment.
+    composed_of:
+    - preferential_attachment
+    tier: 4
+    source_domain: graph_intro_ch06
+  generalized_barabasi_albert_graph:
+    defines: An extension of the BA construction that adds extra edges among existing
+      vertices proportional to the product of their degrees, allowing the power-law
+      exponent to be tuned.
+    composed_of:
+    - barabasi_albert_graph
+    tier: 5
+    source_domain: graph_intro_ch06
+  ip_address:
+    defines: An assignable 32-bit address, split into a network identifier and host
+      identifier, used by routers to route packets across a communication network.
+    composed_of:
+    - host
+    - router
+    tier: 1
+    source_domain: graph_intro_ch07
+  local_area_network:
+    defines: A small-area network of computers connected by a switch, typically spanning
+      at most a few hundred meters.
+    composed_of:
+    - computer_network
+    - mac_address
+    tier: 1
+    source_domain: graph_intro_ch07
+  internet_service_provider:
+    defines: An organization owning large-area networks (tier-1, tier-2, or tier-3)
+      that provides access to, and transit across, the Internet.
+    composed_of:
+    - computer_network
+    tier: 1
+    source_domain: graph_intro_ch07
+  client_server_architecture:
+    defines: An application organization in which a server hosts the core application
+      logic and clients send requests to it and receive replies, representable as
+      a star-shaped graph.
+    composed_of:
+    - computer_network
+    - host
+    tier: 1
+    source_domain: graph_intro_ch07
+  overlay_network:
+    defines: A communication network formed among peers of a distributed application,
+      each maintaining a partial view of other peers, represented as a graph over
+      the underlying Internet.
+    composed_of:
+    - partial_view
+    - computer_network
+    tier: 1
+    source_domain: graph_intro_ch07
+  web_graph:
+    defines: A directed graph representation of the Web in which vertices are pages
+      and arcs are hyperlinks between them.
+    composed_of:
+    - world_wide_web
+    - url
+    - http
+    tier: 1
+    source_domain: graph_intro_ch07
+  autonomous_system:
+    defines: A collection of networks managed under the same administration and routing
+      policy, represented as a vertex in the graph model of the Internet.
+    composed_of:
+    - internet_service_provider
+    - router
+    tier: 2
+    source_domain: graph_intro_ch07
+  structured_overlay_network:
+    defines: An overlay network in which each peer's partial view contains references
+      to specific, deterministically chosen peers rather than random ones.
+    composed_of:
+    - overlay_network
+    tier: 2
+    source_domain: graph_intro_ch07
+  random_overlay_network:
+    defines: An overlay network in which peers' partial views are kept close to uniformly
+      random, typically maintained via gossiping/epidemic protocols.
+    composed_of:
+    - overlay_network
+    tier: 2
+    source_domain: graph_intro_ch07
+  web_crawler:
+    defines: A program that automatically fetches Web pages starting from seed pages,
+      extracting and following references to discover the Web graph's structure.
+    composed_of:
+    - web_graph
+    tier: 2
+    source_domain: graph_intro_ch07
+  peering_relationship:
+    defines: A direct link between border gateway routers of two networks that allows
+      traffic to flow between them.
+    composed_of:
+    - autonomous_system
+    - router
+    tier: 3
+    source_domain: graph_intro_ch07
+  border_gateway_protocol:
+    defines: The routing protocol used by autonomous systems to discover and advertise
+      paths to networks, based on the Bellman-Ford algorithm but advertising full
+      paths.
+    composed_of:
+    - autonomous_system
+    - shortest_path_algorithm
+    tier: 3
+    source_domain: graph_intro_ch07
+  successor:
+    defines: In Chord, the peer with the smallest identifier greater than or equal
+      to a given key k, responsible for storing that key's data.
+    composed_of:
+    - structured_overlay_network
+    tier: 3
+    source_domain: graph_intro_ch07
+  epidemic_protocol:
+    defines: A decentralized protocol in which a peer periodically exchanges data
+      or view entries with another uniformly-at-random chosen peer, disseminating
+      updates across the network.
+    composed_of:
+    - random_overlay_network
+    tier: 3
+    source_domain: graph_intro_ch07
+  finger_table:
+    defines: A Chord peer's partial view consisting of shortcut references to successor
+      peers at exponentially increasing distances, enabling logarithmic-time lookups.
+    composed_of:
+    - successor
+    tier: 4
+    source_domain: graph_intro_ch07
+  homophily:
+    defines: The tendency of people to maintain stronger relationships with those
+      who are similar to themselves.
+    composed_of:
+    - social_network
+    tier: 1
+    source_domain: graph_intro_ch08
+  vertex_centrality:
+    defines: A metric telling to what extent a vertex is at the center of a graph,
+      based on its maximum distance to all other vertices.
+    composed_of:
+    - social_network
+    tier: 1
+    source_domain: graph_intro_ch08
+  closeness:
+    defines: A centrality metric based on the distance from a vertex to every other
+      vertex in the graph.
+    composed_of:
+    - vertex_centrality
+    tier: 2
+    source_domain: graph_intro_ch08
+  degree_prestige:
+    defines: A directed-graph prestige metric defined as the indegree of a vertex.
+    composed_of:
+    - social_network
+    tier: 1
+    source_domain: graph_intro_ch08
+  influence_domain:
+    defines: The set of vertices from which a given vertex can be reached through
+      a directed path.
+    composed_of:
+    - social_network
+    tier: 1
+    source_domain: graph_intro_ch08
+  proximity_prestige:
+    defines: A prestige metric combining the fraction of vertices that can influence
+      a vertex with their average distance to it.
+    composed_of:
+    - influence_domain
+    - closeness
+    tier: 3
+    source_domain: graph_intro_ch08
+  ranked_prestige:
+    defines: A prestige metric in which a vertex's importance depends recursively
+      on the importance of the vertices that nominate it, computed as an eigenvector
+      of the weight matrix.
+    composed_of:
+    - degree_prestige
+    tier: 2
+    source_domain: graph_intro_ch08
+  structural_balance:
+    defines: A theory examining whether the positive/negative sentiment relationships
+      among group members form a stable, balanced configuration.
+    composed_of:
+    - signed_graph
+    - triad
+    tier: 1
+    source_domain: graph_intro_ch08
+  balanced_signed_graph:
+    defines: A signed graph in which all cycles are positive, equivalently one whose
+      vertex set can be partitioned into two subsets with only negative edges between
+      them and only positive edges within them.
+    composed_of:
+    - signed_graph
+    - structural_balance
+    tier: 2
+    source_domain: graph_intro_ch08
+  cohesive_subgroup:
+    defines: A closely bound group of people within a social network, such as a family,
+      friend group, or clique.
+    composed_of:
+    - social_network
+    - clique
+    tier: 1
+    source_domain: graph_intro_ch08
+  k_distance_clique:
+    defines: A maximal subgraph in which the distance between any two members, measured
+      in the original graph, is at most k.
+    composed_of:
+    - clique
+    tier: 1
+    source_domain: graph_intro_ch08
+  k_clan:
+    defines: A k-distance-clique in which the distance between any two members, measured
+      within the subgraph itself, is also at most k.
+    composed_of:
+    - k_distance_clique
+    tier: 2
+    source_domain: graph_intro_ch08
+  k_club:
+    defines: A maximal subgraph whose diameter is at most k.
+    composed_of:
+    - clique
+    tier: 1
+    source_domain: graph_intro_ch08
+  k_core:
+    defines: A maximal subgraph in which every vertex has degree at least k within
+      that subgraph.
+    composed_of:
+    - cohesive_subgroup
+    tier: 2
+    source_domain: graph_intro_ch08
+  clique_percolation:
+    defines: A community-detection method that unions overlapping k-cliques sharing
+      at least k-1 vertices into a k-clique community.
+    composed_of:
+    - clique
+    tier: 1
+    source_domain: graph_intro_ch08
+  structural_equivalence:
+    defines: Two vertices are structurally equivalent if they have exactly the same
+      sets of in-neighbors and out-neighbors.
+    composed_of:
+    - social_network
+    tier: 1
+    source_domain: graph_intro_ch08
+  automorphic_equivalence:
+    defines: Two vertices are automorphically equivalent if there exists an automorphism
+      of the graph mapping one vertex to the other.
+    composed_of:
+    - automorphism
+    tier: 1
+    source_domain: graph_intro_ch08
+  regular_equivalence:
+    defines: Two vertices are regularly equivalent if, for every neighbor of one,
+      there is a neighbor of the other that is also regularly equivalent, reflecting
+      shared social roles.
+    composed_of:
+    - structural_equivalence
+    tier: 2
+    source_domain: graph_intro_ch08
+applications:
+  graph_representation:
+    defines: Ways to encode a graph for computation, including adjacency matrices,
+      incidence matrices, and edge lists, with tradeoffs in storage efficiency.
+    needs:
+    - graph
+    tier: 1
+    source_domain: graph_intro_ch01
+  graph_embedding:
+    defines: A representation of a graph on a surface (typically the plane) associating
+      vertices with points, including circular, ranked, and spring embeddings.
+    needs:
+    - graph
+    tier: 1
+    source_domain: graph_intro_ch01
+  harary_graph:
+    defines: A k-connected simple graph on n vertices constructed with the minimal
+      possible number of edges.
+    needs:
+    - connectivity_numbers
+    tier: 5
+    source_domain: graph_intro_ch01
+  strongly_connected_orientation:
+    defines: A connected undirected graph G has a strongly connected orientation if
+      and only if G is 2-edge-connected (lambda(G) >= 2).
+    needs:
+    - orientation
+    - strong_weak_connectivity
+    tier: 3
+    source_domain: graph_intro_ch02
+  communication_network_routing:
+    defines: Modeling communication and transportation networks as digraphs where
+      strong connectivity ensures any node can route to any other node.
+    needs:
+    - strong_weak_connectivity
+    tier: 2
+    source_domain: graph_intro_ch02
+  storage_load_balancing:
+    defines: Modeling data block migrations between storage devices as arcs whose
+      scheduling corresponds to finding a minimal edge coloring.
+    needs:
+    - edge_chromatic_number
+    tier: 2
+    source_domain: graph_intro_ch02
+  class_scheduling_application:
+    defines: Modeling classes as vertices connected by an edge when they share students,
+      so the minimum number of time slots equals the graph's chromatic number.
+    needs:
+    - chromatic_number
+    tier: 2
+    source_domain: graph_intro_ch02
+  four_color_theorem:
+    defines: Any planar graph can be vertex colored using at most four colors, proven
+      by Appel and Haken via exhaustive computer case-checking.
+    needs:
+    - chromatic_number
+    tier: 2
+    source_domain: graph_intro_ch02
+  chinese_postman_problem:
+    defines: The problem of finding a minimum-weight closed walk that covers every
+      edge of a weighted graph at least once, solved by duplicating edges to make
+      the graph Eulerian and then applying Fleury's algorithm.
+    needs:
+    - weighted_graph
+    - euler_tour
+    - matching
+    - fleurys_algorithm
+    tier: 4
+    source_domain: graph_intro_ch03
+  traveling_salesman_problem:
+    defines: The practical problem of finding a minimum-weight Hamilton cycle visiting
+      a set of locations, modeled using complete weighted (and possibly directed)
+      graphs.
+    needs:
+    - optimal_hamilton_cycle
+    - directed_hamiltonian_transformation
+    tier: 5
+    source_domain: graph_intro_ch03
+  kruskals_algorithm:
+    defines: An algorithm that constructs a minimum spanning tree by greedily adding
+      the lowest-weight edge that does not create a cycle.
+    needs:
+    - minimum_spanning_tree
+    - cycle
+    tier: 3
+    source_domain: graph_intro_ch04
+  dijkstras_sink_tree_algorithm:
+    defines: An algorithm that constructs an optimal sink tree rooted at a destination
+      vertex in a directed weighted graph with nonnegative weights.
+    needs:
+    - sink_tree
+    - weighted_graph
+    tier: 3
+    source_domain: graph_intro_ch04
+  bellman_ford_algorithm:
+    defines: A decentralized algorithm in which each node iteratively computes optimal
+      paths to other nodes using only locally available information from neighbors.
+    needs:
+    - sink_tree
+    - routing_protocol
+    tier: 3
+    source_domain: graph_intro_ch04
+  count_to_infinity_problem:
+    defines: A convergence failure of the Bellman-Ford algorithm in which nodes repeatedly
+      increase their advertised routing cost after a link failure, without stabilizing.
+    needs:
+    - bellman_ford_algorithm
+    tier: 4
+    source_domain: graph_intro_ch04
+  algorithmic_complexity_comparison:
+    defines: An analysis comparing the computational time of Dijkstra's and Bellman-Ford's
+      algorithms as a function of graph size, using big O notation.
+    needs:
+    - dijkstras_sink_tree_algorithm
+    - bellman_ford_algorithm
+    - big_o_notation
+    tier: 4
+    source_domain: graph_intro_ch04
+  hub_identification:
+    defines: The use of skewed degree sequences to identify high-degree hub vertices
+      whose removal can partition a network.
+    needs:
+    - degree_distribution
+    tier: 2
+    source_domain: graph_intro_ch05
+  epidemic_dissemination:
+    defines: A model of information, disease, or opinion spreading through a network
+      by neighbor-to-neighbor updates, whose speed is affected by the network's clustering
+      coefficient.
+    needs:
+    - clustering_coefficient
+    tier: 2
+    source_domain: graph_intro_ch05
+  facility_placement:
+    defines: The use of eccentricity, radius, and closeness to decide optimal placement
+      of facilities (e.g., fire stations vs. hospitals) within a network.
+    needs:
+    - eccentricity
+    - radius
+    - closeness_centrality
+    tier: 4
+    source_domain: graph_intro_ch05
+  network_resilience:
+    defines: The observed robustness of random networks, whereby most vertices remain
+      in one large component even after removing a large fraction of vertices.
+    needs:
+    - giant_component
+    tier: 3
+    source_domain: graph_intro_ch06
+  food_web_modeling:
+    defines: The application of random-graph and network-analysis techniques to model
+      predator-prey relationships in ecosystems and study their resilience.
+    needs:
+    - er_random_graph
+    - giant_component
+    tier: 3
+    source_domain: graph_intro_ch06
+  collaboration_and_citation_networks:
+    defines: Real-world networks (actor collaborations, scientific co-authorship,
+      citations) analyzed using random-graph theory to understand collaboration structure
+      and influence.
+    needs:
+    - er_random_graph
+    - scale_free_network
+    - degree_distribution
+    tier: 3
+    source_domain: graph_intro_ch06
+  targeted_attack_vulnerability:
+    defines: The property whereby scale-free networks fragment quickly when their
+      highest-degree hubs are deliberately removed, despite being robust to random
+      removal.
+    needs:
+    - hub_node
+    - scale_free_network
+    tier: 4
+    source_domain: graph_intro_ch06
+  tunable_clustering_scale_free_model:
+    defines: A construction algorithm (Holme-Kim) that extends preferential attachment
+      by explicitly forming triangles with a probability q, allowing the clustering
+      coefficient to be tuned while preserving a scale-free degree distribution.
+    needs:
+    - barabasi_albert_graph
+    - clustering_coefficient_random_graphs
+    tier: 5
+    source_domain: graph_intro_ch06
+  as_topology:
+    defines: The graph structure of the Internet formed by autonomous systems as vertices
+      and their peering relationships as edges, empirically found to be scale-free
+      and small-world.
+    needs:
+    - autonomous_system
+    - peering_relationship
+    - scale_free_network
+    - small_world_network
+    tier: 4
+    source_domain: graph_intro_ch07
+  chord:
+    defines: A structured peer-to-peer network organized as a ring of m-bit identifiers,
+      where each key is stored at the peer with the smallest identifier greater than
+      or equal to it.
+    needs:
+    - structured_overlay_network
+    - successor
+    - finger_table
+    tier: 5
+    source_domain: graph_intro_ch07
+  newscast:
+    defines: An epidemic-based unstructured peer-to-peer protocol in which peers randomly
+      exchange and shrink partial view entries, producing a graph resembling an Erdos-Renyi
+      random graph.
+    needs:
+    - epidemic_protocol
+    - partial_view
+    tier: 4
+    source_domain: graph_intro_ch07
+  bowtie_structure:
+    defines: A macroscopic model of the Web graph dividing pages into SCC, IN, OUT,
+      tendrils/tubes, and disconnected components based on directed reachability.
+    needs:
+    - web_graph
+    tier: 2
+    source_domain: graph_intro_ch07
+  pagerank:
+    defines: A recursive algorithm that ranks a Web page's importance based on the
+      ranks of pages linking to it, weighted by a damping factor.
+    needs:
+    - web_graph
+    tier: 2
+    source_domain: graph_intro_ch07
+  affiliation_network:
+    defines: A two-mode bipartite network in which actors are linked to the events
+      they participate in, used to study indirect relationships between actors or
+      events.
+    needs:
+    - social_network
+    tier: 1
+    source_domain: graph_intro_ch08
