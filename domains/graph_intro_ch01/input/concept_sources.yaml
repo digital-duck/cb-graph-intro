@@ -1,0 +1,132 @@
+domain: graph_theory_and_complex_networks_an_introduction
+sources:
+  graph:
+    label: Graph
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  vertex_adjacency:
+    label: Adjacency and Neighbor Set
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  vertex_degree:
+    label: Vertex Degree
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  handshake_theorem:
+    label: Handshake Theorem (Sum of Degrees)
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  degree_sequence:
+    label: Degree Sequence
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  regular_graph:
+    label: Regular Graph
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  graphic_sequence_havel_hakimi:
+    label: Graphic Sequences and the Havel-Hakimi Theorem
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  subgraph:
+    label: Subgraph
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  induced_subgraph:
+    label: Induced Subgraph
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  line_graph:
+    label: Line Graph
+    sections:
+    - id: ch01_formalities
+      title: Formalities
+  graph_representation:
+    label: Graph Data Representations
+    sections:
+    - id: ch01_graph_representations
+      title: Graph representations
+  graph_isomorphism:
+    label: Graph Isomorphism
+    sections:
+    - id: ch01_graph_representations
+      title: Graph representations
+  walk_trail_path_cycle:
+    label: Walks, Trails, Paths, and Cycles
+    sections:
+    - id: ch01_connectivity
+      title: Connectivity
+  connectedness:
+    label: Connectedness
+    sections:
+    - id: ch01_connectivity
+      title: Connectivity
+  graph_component:
+    label: Graph Component
+    sections:
+    - id: ch01_connectivity
+      title: Connectivity
+  vertex_edge_cut:
+    label: Vertex Cut and Edge Cut
+    sections:
+    - id: ch01_connectivity
+      title: Connectivity
+  connectivity_numbers:
+    label: Vertex and Edge Connectivity (κ, λ)
+    sections:
+    - id: ch01_connectivity
+      title: Connectivity
+  path_independence:
+    label: Vertex- and Edge-Independent Paths
+    sections:
+    - id: ch01_connectivity
+      title: Connectivity
+  mengers_theorem:
+    label: Menger's Theorem
+    sections:
+    - id: ch01_connectivity
+      title: Connectivity
+  harary_graph:
+    label: Harary Graph
+    sections:
+    - id: ch01_connectivity
+      title: Connectivity
+  graph_embedding:
+    label: Graph Embedding
+    sections:
+    - id: ch01_drawing_graphs
+      title: Drawing graphs
+  bipartite_graph:
+    label: Bipartite Graph
+    sections:
+    - id: ch01_drawing_graphs
+      title: Drawing graphs
+  planar_graph:
+    label: Planar Graph
+    sections:
+    - id: ch01_drawing_graphs
+      title: Drawing graphs
+  tree:
+    label: Tree and Forest
+    sections:
+    - id: ch01_drawing_graphs
+      title: Drawing graphs
+  eulers_formula:
+    label: Euler's Formula
+    sections:
+    - id: ch01_drawing_graphs
+      title: Drawing graphs
+  planarity_bounds:
+    label: Edge Bounds and Nonplanarity Criteria
+    sections:
+    - id: ch01_drawing_graphs
+      title: Drawing graphs

@@ -1,0 +1,165 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch5
+primitives:
+  vertex_degree:
+    defines: The number of edges incident to a vertex, used as a starting point for network analysis.
+    tier: 0
+  adjacency_matrix:
+    defines: A matrix A where A[i,j]=1 if an edge joins vertices vi and vj, and 0 otherwise, used to elegantly
+      express network metrics.
+    tier: 0
+  correlation_coefficient:
+    defines: A statistical measure r(x,y) of the extent to which a change in one variable is associated
+      with a change in another.
+    tier: 0
+  shortest_path:
+    defines: A path of minimal length (or minimal weight) between two vertices, computable via algorithms
+      such as Dijkstra's.
+    tier: 0
+  triangle:
+    defines: A complete subgraph of exactly three vertices, including a given vertex v.
+    tier: 0
+  triple:
+    defines: A subgraph of exactly three vertices and two edges, where a given vertex v is incident with
+      both edges.
+    tier: 0
+concepts:
+  degree_distribution:
+    defines: The histogram or plot h(d) of the number of vertices having each degree d, used to characterize
+      a network's structure (regular vs. hub-dominated).
+    composed_of:
+    - vertex_degree
+    tier: 1
+  degree_correlation:
+    defines: The correlation coefficient applied to the degrees of adjacent vertices, indicating whether
+      similar-degree vertices tend to be joined (assortative) or not (disassortative).
+    composed_of:
+    - vertex_degree
+    - correlation_coefficient
+    tier: 1
+  scale_freeness:
+    defines: A metric s(G) summing the products of degrees of adjacent vertex pairs, maximal when high-degree
+      hubs are connected to each other; normalized as S(G) relative to the maximum over all graphs with
+      the same degree sequence.
+    composed_of:
+    - vertex_degree
+    tier: 1
+  geodesic_distance:
+    defines: The length of a shortest path between two vertices u and v, denoted d(u,v).
+    composed_of:
+    - shortest_path
+    tier: 1
+  eccentricity:
+    defines: The maximum distance from a vertex u to any other vertex in the graph, ϵ(u) = max{d(u,v)}.
+    composed_of:
+    - geodesic_distance
+    tier: 2
+  radius:
+    defines: The minimum eccentricity over all vertices in a graph, indicating how disseparate the vertices
+      are.
+    composed_of:
+    - eccentricity
+    tier: 3
+  diameter:
+    defines: The maximal shortest-path distance between any two vertices in a graph.
+    composed_of:
+    - geodesic_distance
+    tier: 2
+  average_path_length:
+    defines: The average of the shortest-path distances between all pairs of vertices in a connected graph.
+    composed_of:
+    - geodesic_distance
+    tier: 2
+  characteristic_path_length:
+    defines: The median over all per-vertex average distances d(u), used as an efficient-to-compute proxy
+      for the average path length in large graphs.
+    composed_of:
+    - average_path_length
+    tier: 3
+  clustering_coefficient:
+    defines: For a vertex v, the ratio of actual edges among v's neighbors to the maximum possible number
+      of such edges; averaged over all vertices to give the clustering coefficient of a graph.
+    composed_of:
+    - triangle
+    - triple
+    tier: 1
+  vertex_strength:
+    defines: In a weighted graph, the total sum of the weights of edges incident with a vertex, a weighted
+      generalization of vertex degree.
+    composed_of:
+    - vertex_degree
+    tier: 1
+  weighted_clustering_coefficient:
+    defines: A clustering coefficient variant for weighted graphs that weighs closed triangles at a vertex
+      by the edge weights, normalized by vertex strength.
+    composed_of:
+    - clustering_coefficient
+    - vertex_strength
+    tier: 2
+  network_transitivity:
+    defines: The ratio of the number of triangles to the number of triples in a graph, giving a global
+      (whole-network) view of clustering, extendable to weighted and directed graphs.
+    composed_of:
+    - triangle
+    - triple
+    tier: 1
+  network_density:
+    defines: The ratio of the actual number of edges in a graph to the maximum possible number of edges,
+      ρ(G) = m/(n choose 2).
+    composed_of:
+    - vertex_degree
+    tier: 1
+  centrality:
+    defines: A general concept for quantifying the relative importance of a vertex in a network, with
+      several formal notions depending on context.
+    composed_of:
+    - vertex_degree
+    - geodesic_distance
+    tier: 2
+  center_of_graph:
+    defines: The set of vertices whose eccentricity equals the radius of the graph, i.e., the vertices
+      at minimal distance from all others.
+    composed_of:
+    - eccentricity
+    - radius
+    tier: 4
+  eccentricity_centrality:
+    defines: The centrality of a vertex u defined as the reciprocal of its eccentricity, 1/ϵ(u).
+    composed_of:
+    - centrality
+    - eccentricity
+    tier: 3
+  closeness_centrality:
+    defines: The centrality of a vertex u defined as the reciprocal of the sum of its distances to all
+      other vertices, indicating how close u is to the rest of the network.
+    composed_of:
+    - centrality
+    - geodesic_distance
+    tier: 3
+  betweenness_centrality:
+    defines: The centrality of a vertex u based on the fraction of shortest paths between other vertex
+      pairs that pass through u.
+    composed_of:
+    - centrality
+    - shortest_path
+    tier: 3
+applications:
+  hub_identification:
+    defines: The use of skewed degree sequences to identify high-degree hub vertices whose removal can
+      partition a network.
+    needs:
+    - degree_distribution
+    tier: 2
+  epidemic_dissemination:
+    defines: A model of information, disease, or opinion spreading through a network by neighbor-to-neighbor
+      updates, whose speed is affected by the network's clustering coefficient.
+    needs:
+    - clustering_coefficient
+    tier: 2
+  facility_placement:
+    defines: The use of eccentricity, radius, and closeness to decide optimal placement of facilities
+      (e.g., fire stations vs. hospitals) within a network.
+    needs:
+    - eccentricity
+    - radius
+    - closeness_centrality
+    tier: 4

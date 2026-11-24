@@ -1,0 +1,142 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch5
+sources:
+  vertex_degree:
+    label: Vertex Degree
+    sections:
+    - id: ch05_vertex_degrees
+      title: Vertex degrees
+  adjacency_matrix:
+    label: Adjacency Matrix
+    sections:
+    - id: ch05_vertex_degrees
+      title: Vertex degrees
+  correlation_coefficient:
+    label: Correlation Coefficient
+    sections:
+    - id: ch05_vertex_degrees
+      title: Vertex degrees
+  shortest_path:
+    label: Shortest Path
+    sections:
+    - id: ch05_distance_statistics
+      title: Distance statistics
+  triangle:
+    label: Triangle
+    sections:
+    - id: ch05_clustering_coefficient
+      title: Clustering coefficient
+  triple:
+    label: Triple
+    sections:
+    - id: ch05_clustering_coefficient
+      title: Clustering coefficient
+  degree_distribution:
+    label: Degree Distribution
+    sections:
+    - id: ch05_vertex_degrees
+      title: Vertex degrees
+  degree_correlation:
+    label: Degree Correlation (Assortative Mixing)
+    sections:
+    - id: ch05_vertex_degrees
+      title: Vertex degrees
+  scale_freeness:
+    label: Scale-Freeness
+    sections:
+    - id: ch05_vertex_degrees
+      title: Vertex degrees
+  geodesic_distance:
+    label: Geodesic Distance
+    sections:
+    - id: ch05_distance_statistics
+      title: Distance statistics
+  eccentricity:
+    label: Eccentricity
+    sections:
+    - id: ch05_distance_statistics
+      title: Distance statistics
+  radius:
+    label: Radius
+    sections:
+    - id: ch05_distance_statistics
+      title: Distance statistics
+  diameter:
+    label: Diameter
+    sections:
+    - id: ch05_distance_statistics
+      title: Distance statistics
+  average_path_length:
+    label: Average Path Length
+    sections:
+    - id: ch05_distance_statistics
+      title: Distance statistics
+  characteristic_path_length:
+    label: Characteristic Path Length
+    sections:
+    - id: ch05_distance_statistics
+      title: Distance statistics
+  clustering_coefficient:
+    label: Clustering Coefficient
+    sections:
+    - id: ch05_clustering_coefficient
+      title: Clustering coefficient
+  vertex_strength:
+    label: Vertex Strength
+    sections:
+    - id: ch05_clustering_coefficient
+      title: Clustering coefficient
+  weighted_clustering_coefficient:
+    label: Weighted Clustering Coefficient
+    sections:
+    - id: ch05_clustering_coefficient
+      title: Clustering coefficient
+  network_transitivity:
+    label: Network Transitivity
+    sections:
+    - id: ch05_clustering_coefficient
+      title: Clustering coefficient
+  network_density:
+    label: Network Density
+    sections:
+    - id: ch05_clustering_coefficient
+      title: Clustering coefficient
+  centrality:
+    label: Centrality
+    sections:
+    - id: ch05_centrality
+      title: Centrality
+  center_of_graph:
+    label: Center of a Graph
+    sections:
+    - id: ch05_centrality
+      title: Centrality
+  eccentricity_centrality:
+    label: Eccentricity-Based Centrality
+    sections:
+    - id: ch05_centrality
+      title: Centrality
+  closeness_centrality:
+    label: Closeness Centrality
+    sections:
+    - id: ch05_centrality
+      title: Centrality
+  betweenness_centrality:
+    label: Betweenness Centrality
+    sections:
+    - id: ch05_centrality
+      title: Centrality
+  hub_identification:
+    label: Hub Identification via Degree
+    sections:
+    - id: ch05_vertex_degrees
+      title: Vertex degrees
+  epidemic_dissemination:
+    label: Epidemic (Gossip) Dissemination
+    sections:
+    - id: ch05_clustering_coefficient
+      title: Clustering coefficient
+  facility_placement:
+    label: Facility Placement via Distance Metrics
+    sections:
+    - id: ch05_centrality
+      title: Centrality

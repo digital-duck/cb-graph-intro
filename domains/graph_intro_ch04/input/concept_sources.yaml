@@ -1,0 +1,96 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch4
+sources:
+  tree:
+    label: Tree
+    sections:
+    - id: ch04_background
+      title: Background
+    - id: ch04_fundamentals
+      title: Fundamentals
+  cycle:
+    label: Cycle
+    sections:
+    - id: ch04_fundamentals
+      title: Fundamentals
+  connected_graph:
+    label: Connected Graph
+    sections:
+    - id: ch04_fundamentals
+      title: Fundamentals
+  weighted_graph:
+    label: Weighted Graph
+    sections:
+    - id: ch04_spanning_trees
+      title: Spanning trees
+  rooted_tree:
+    label: Rooted Tree
+    sections:
+    - id: ch04_background
+      title: Background
+  binary_tree:
+    label: Binary Tree
+    sections:
+    - id: ch04_background
+      title: Background
+  cut_edge:
+    label: Cut Edge
+    sections:
+    - id: ch04_fundamentals
+      title: Fundamentals
+  tree_characterizations:
+    label: Equivalent Characterizations of Trees
+    sections:
+    - id: ch04_fundamentals
+      title: Fundamentals
+  spanning_tree:
+    label: Spanning Tree
+    sections:
+    - id: ch04_background
+      title: Background
+    - id: ch04_spanning_trees
+      title: Spanning trees
+  minimum_spanning_tree:
+    label: Minimum Spanning Tree
+    sections:
+    - id: ch04_spanning_trees
+      title: Spanning trees
+  kruskals_algorithm:
+    label: Kruskal's Algorithm
+    sections:
+    - id: ch04_spanning_trees
+      title: Spanning trees
+  routing_protocol:
+    label: Routing Protocol
+    sections:
+    - id: ch04_routing_in_communication_networks
+      title: Routing in communication networks
+  sink_tree:
+    label: Sink Tree
+    sections:
+    - id: ch04_routing_in_communication_networks
+      title: Routing in communication networks
+  dijkstras_sink_tree_algorithm:
+    label: Dijkstra's Algorithm (Sink Tree Construction)
+    sections:
+    - id: ch04_routing_in_communication_networks
+      title: Routing in communication networks
+  bellman_ford_algorithm:
+    label: Bellman-Ford Algorithm
+    sections:
+    - id: ch04_routing_in_communication_networks
+      title: Routing in communication networks
+  count_to_infinity_problem:
+    label: Count-to-Infinity Problem
+    sections:
+    - id: ch04_routing_in_communication_networks
+      title: Routing in communication networks
+  big_o_notation:
+    label: Big O Notation
+    sections:
+    - id: ch04_routing_in_communication_networks
+      title: Routing in communication networks
+  algorithmic_complexity_comparison:
+    label: Algorithmic Complexity Comparison (Dijkstra vs. Bellman-Ford)
+    sections:
+    - id: ch04_routing_in_communication_networks
+      title: Routing in communication networks

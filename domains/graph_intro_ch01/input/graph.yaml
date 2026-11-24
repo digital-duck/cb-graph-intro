@@ -1,0 +1,159 @@
+domain: graph_theory_and_complex_networks_an_introduction
+primitives:
+  graph:
+    defines: A collection of vertices V and edges E, written G = (V, E), where each edge joins exactly
+      two vertices.
+    tier: 0
+concepts:
+  vertex_adjacency:
+    defines: Two vertices joined by an edge are adjacent; the neighbor set N(v) is the collection of vertices
+      adjacent to v.
+    composed_of:
+    - graph
+    tier: 1
+  vertex_degree:
+    defines: The number of edges incident with a vertex v, denoted δ(v), with loops counted twice.
+    composed_of:
+    - graph
+    tier: 1
+  subgraph:
+    defines: A graph H is a subgraph of G if its vertex and edge sets are subsets of G's, with edge endpoints
+      preserved.
+    composed_of:
+    - graph
+    tier: 1
+  walk_trail_path_cycle:
+    defines: An alternating sequence of vertices and edges (walk); a trail has distinct edges, a path
+      has distinct vertices, and a cycle is a closed trail with distinct internal vertices.
+    composed_of:
+    - graph
+    tier: 1
+  bipartite_graph:
+    defines: A graph whose vertices can be partitioned into two disjoint sets such that every edge joins
+      vertices from different sets.
+    composed_of:
+    - graph
+    tier: 1
+  handshake_theorem:
+    defines: For any graph, the sum of all vertex degrees equals twice the number of edges, and the number
+      of odd-degree vertices is even.
+    composed_of:
+    - vertex_degree
+    tier: 2
+  degree_sequence:
+    defines: The list of vertex degrees of a graph, typically ordered in descending order.
+    composed_of:
+    - vertex_degree
+    tier: 2
+  regular_graph:
+    defines: A graph in which every vertex has the same degree k, called k-regular (3-regular graphs are
+      cubic).
+    composed_of:
+    - vertex_degree
+    tier: 2
+  induced_subgraph:
+    defines: The subgraph obtained from a subset of vertices (or edges) of G by including all edges (or
+      endpoints) from G consistent with that subset.
+    composed_of:
+    - subgraph
+    tier: 2
+  line_graph:
+    defines: A graph L(G) constructed by representing each edge of G as a vertex, joining two such vertices
+      when their original edges share an endpoint in G.
+    composed_of:
+    - graph
+    - vertex_adjacency
+    tier: 2
+  graph_isomorphism:
+    defines: Two graphs are isomorphic if there is a one-to-one vertex mapping preserving edge adjacency,
+      meaning they are structurally the same graph.
+    composed_of:
+    - vertex_adjacency
+    tier: 2
+  connectedness:
+    defines: A graph is connected if every pair of distinct vertices is joined by a path; otherwise it
+      decomposes into components.
+    composed_of:
+    - walk_trail_path_cycle
+    tier: 2
+  path_independence:
+    defines: A collection of paths between two vertices that share only endpoints (vertex independent)
+      or share no edges (edge independent).
+    composed_of:
+    - walk_trail_path_cycle
+    tier: 2
+  planar_graph:
+    defines: A graph that can be drawn (embedded) in the plane such that no two edges intersect, forming
+      a plane graph with regions/faces.
+    composed_of:
+    - graph_embedding
+    tier: 2
+  graphic_sequence_havel_hakimi:
+    defines: A criterion (and recursive construction) for determining whether a given list of numbers
+      corresponds to the degree sequence of some simple graph.
+    composed_of:
+    - degree_sequence
+    tier: 3
+  graph_component:
+    defines: A maximal connected subgraph of G.
+    composed_of:
+    - connectedness
+    tier: 3
+  vertex_edge_cut:
+    defines: A set of vertices (or edges) whose removal increases the number of components of a graph;
+      single-element cuts are cut vertices/edges.
+    composed_of:
+    - connectedness
+    tier: 3
+  tree:
+    defines: A simple, connected, acyclic graph; a forest is a simple graph whose components are all trees.
+      A tree with n vertices has n-1 edges.
+    composed_of:
+    - connectedness
+    - walk_trail_path_cycle
+    tier: 3
+  eulers_formula:
+    defines: For a plane graph with n vertices, m edges, and r regions, n − m + r = 2.
+    composed_of:
+    - planar_graph
+    tier: 3
+  connectivity_numbers:
+    defines: The minimum size of a vertex cut (κ) or edge cut (λ) of a connected graph, satisfying κ(G)
+      ≤ λ(G) ≤ minimum vertex degree.
+    composed_of:
+    - vertex_edge_cut
+    - vertex_degree
+    tier: 4
+  planarity_bounds:
+    defines: Necessary conditions for planarity (e.g., m ≤ 3n − 6) used to prove that K5 and K3,3 are
+      nonplanar, and that any graph containing them as a subgraph is nonplanar.
+    composed_of:
+    - eulers_formula
+    - bipartite_graph
+    tier: 4
+  mengers_theorem:
+    defines: The minimum vertex (edge) cut size separating two nonadjacent vertices equals the maximum
+      number of pairwise vertex- (edge-) independent paths between them.
+    composed_of:
+    - connectivity_numbers
+    - path_independence
+    tier: 5
+applications:
+  graph_representation:
+    defines: Ways to encode a graph for computation, including adjacency matrices, incidence matrices,
+      and edge lists, with tradeoffs in storage efficiency.
+    needs:
+    - graph
+    tier: 1
+  graph_embedding:
+    defines: A representation of a graph on a surface (typically the plane) associating vertices with
+      points, including circular, ranked, and spring embeddings.
+    needs:
+    - graph
+    tier: 1
+  harary_graph:
+    defines: A k-connected simple graph on n vertices constructed with the minimal possible number of
+      edges.
+    needs:
+    - connectivity_numbers
+    tier: 5

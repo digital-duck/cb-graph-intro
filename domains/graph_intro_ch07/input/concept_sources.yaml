@@ -1,0 +1,157 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch7
+sources:
+  computer_network:
+    label: Computer Network
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  host:
+    label: Host
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  mac_address:
+    label: MAC Address
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  ip_address:
+    label: IP Address
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  router:
+    label: Router
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  local_area_network:
+    label: Local-Area Network (LAN)
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  internet_service_provider:
+    label: Internet Service Provider (ISP)
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  peering_relationship:
+    label: Peering Relationship
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  autonomous_system:
+    label: Autonomous System (AS)
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  border_gateway_protocol:
+    label: Border Gateway Protocol (BGP)
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  as_topology:
+    label: AS Topology
+    sections:
+    - id: ch07_the_internet
+      title: The Internet
+  client_server_architecture:
+    label: Client-Server Architecture
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  overlay_network:
+    label: (Peer-to-Peer) Overlay Network
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  structured_overlay_network:
+    label: Structured Overlay Network
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  chord:
+    label: Chord
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  successor:
+    label: Successor (succ(k))
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  finger_table:
+    label: Finger Table
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  random_overlay_network:
+    label: Random (Unstructured) Overlay Network
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  epidemic_protocol:
+    label: Epidemic (Gossip) Protocol
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  partial_view:
+    label: Partial View
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  newscast:
+    label: Newscast
+    sections:
+    - id: ch07_peer_to_peer_overlay_networks
+      title: Peer-to-peer overlay networks
+  world_wide_web:
+    label: World Wide Web
+    sections:
+    - id: ch07_the_world_wide_web
+      title: The World Wide Web
+  url:
+    label: Uniform Resource Locator (URL)
+    sections:
+    - id: ch07_the_world_wide_web
+      title: The World Wide Web
+  http:
+    label: HyperText Transfer Protocol (HTTP)
+    sections:
+    - id: ch07_the_world_wide_web
+      title: The World Wide Web
+  web_graph:
+    label: Web Graph
+    sections:
+    - id: ch07_the_world_wide_web
+      title: The World Wide Web
+  web_crawler:
+    label: Web Crawler
+    sections:
+    - id: ch07_the_world_wide_web
+      title: The World Wide Web
+  bowtie_structure:
+    label: Bowtie Structure of the Web
+    sections:
+    - id: ch07_the_world_wide_web
+      title: The World Wide Web
+  pagerank:
+    label: PageRank
+    sections:
+    - id: ch07_the_world_wide_web
+      title: The World Wide Web
+  scale_free_network:
+    label: Scale-Free Network
+    sections: []
+  small_world_network:
+    label: Small-World Network
+    sections: []
+  degree_distribution:
+    label: Degree Distribution
+    sections: []
+  clustering_coefficient:
+    label: Clustering Coefficient
+    sections: []
+  shortest_path_algorithm:
+    label: Shortest Path Algorithm
+    sections: []

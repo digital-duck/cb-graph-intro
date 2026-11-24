@@ -1,0 +1,109 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch3
+sources:
+  walk:
+    label: Walk
+    sections: []
+  degree:
+    label: Vertex Degree
+    sections: []
+  connected_graph:
+    label: Connected Graph
+    sections: []
+  weighted_graph:
+    label: Weighted Graph
+    sections: []
+  tour:
+    label: Tour
+    sections:
+    - id: ch03_euler_tours
+      title: Euler tours
+  euler_tour:
+    label: Euler Tour
+    sections:
+    - id: ch03_euler_tours
+      title: Euler tours
+  euler_trail:
+    label: Euler Trail
+    sections:
+    - id: ch03_euler_tours
+      title: Euler tours
+  fleurys_algorithm:
+    label: Fleury's Algorithm
+    sections:
+    - id: ch03_euler_tours
+      title: Euler tours
+  chinese_postman_problem:
+    label: Chinese Postman Problem
+    sections:
+    - id: ch03_euler_tours
+      title: Euler tours
+  matching:
+    label: Matching
+    sections:
+    - id: ch03_euler_tours
+      title: Euler tours
+  perfect_matching:
+    label: Perfect Matching
+    sections:
+    - id: ch03_euler_tours
+      title: Euler tours
+  hamilton_path:
+    label: Hamilton Path
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  hamilton_cycle:
+    label: Hamilton Cycle
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  hamiltonian_graph:
+    label: Hamiltonian Graph
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  dirac_theorem:
+    label: Dirac's Theorem
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  ore_theorem:
+    label: Ore's Theorem
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  graph_closure:
+    label: Closure of a Graph
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  bondy_chvatal_theorem:
+    label: Bondy-Chvátal Theorem
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  posa_algorithm:
+    label: Posa's Algorithm
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  rotational_transformation:
+    label: Rotational Transformation
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  optimal_hamilton_cycle:
+    label: Optimal Hamilton Cycle
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  traveling_salesman_problem:
+    label: Traveling Salesman Problem
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles
+  directed_hamiltonian_transformation:
+    label: Directed-to-Undirected Hamiltonian Graph Transformation
+    sections:
+    - id: ch03_hamilton_cycles
+      title: Hamilton cycles

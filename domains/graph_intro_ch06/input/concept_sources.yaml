@@ -1,0 +1,122 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch6
+sources:
+  random_variable:
+    label: Random Variable
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+  expected_value:
+    label: Expected Value (Mean)
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+  er_random_graph:
+    label: Erdős–Rényi Random Graph
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+  degree_distribution:
+    label: Degree Distribution
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+  expected_vertex_degree:
+    label: Expected Vertex Degree
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+  average_path_length:
+    label: Average Path Length
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+    - id: ch06_small_worlds
+      title: Small worlds
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  clustering_coefficient_random_graphs:
+    label: Clustering Coefficient in Random Graphs
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+    - id: ch06_small_worlds
+      title: Small worlds
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  giant_component:
+    label: Giant Component
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+  network_resilience:
+    label: Network Resilience to Node Removal
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  small_world_phenomenon:
+    label: Small-World Phenomenon
+    sections:
+    - id: ch06_small_worlds
+      title: Small worlds
+  watts_strogatz_graph:
+    label: Watts-Strogatz Random Graph
+    sections:
+    - id: ch06_small_worlds
+      title: Small worlds
+  weak_ties:
+    label: Weak Ties
+    sections:
+    - id: ch06_small_worlds
+      title: Small worlds
+  scale_free_network:
+    label: Scale-Free Network
+    sections:
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  power_law_distribution:
+    label: Power-Law Distribution
+    sections:
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  hub_node:
+    label: Hub
+    sections:
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  preferential_attachment:
+    label: Preferential Attachment
+    sections:
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  barabasi_albert_graph:
+    label: Barabási-Albert Random Graph
+    sections:
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  generalized_barabasi_albert_graph:
+    label: Generalized Barabási-Albert Model
+    sections:
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  targeted_attack_vulnerability:
+    label: Vulnerability to Targeted Attack
+    sections:
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  tunable_clustering_scale_free_model:
+    label: Barabási-Albert Model with Tunable Clustering
+    sections:
+    - id: ch06_scale_free_networks
+      title: Scale-free networks
+  food_web_modeling:
+    label: Food Web Modeling as Random Graphs
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks
+  collaboration_and_citation_networks:
+    label: Collaboration and Citation Networks
+    sections:
+    - id: ch06_classical_random_networks
+      title: Classical random networks

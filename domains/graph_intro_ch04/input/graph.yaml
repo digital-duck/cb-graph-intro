@@ -1,0 +1,108 @@
+domain: graph_theory_and_complex_networks_an_introduction_ch4
+primitives:
+  tree:
+    defines: A connected, acyclic graph.
+    tier: 0
+  cycle:
+    defines: A closed path in a graph that returns to its starting vertex without repeating edges.
+    tier: 0
+  connected_graph:
+    defines: A graph in which there exists a path between every pair of vertices.
+    tier: 0
+  weighted_graph:
+    defines: A graph whose edges are each assigned a real-valued weight.
+    tier: 0
+  big_o_notation:
+    defines: A mathematical notation used to describe the asymptotic growth rate of a function, used to
+      compare algorithmic performance.
+    tier: 0
+concepts:
+  rooted_tree:
+    defines: A tree with a single vertex designated as the root, used to represent hierarchical data such
+      as arithmetic expressions.
+    composed_of:
+    - tree
+    tier: 1
+  binary_tree:
+    defines: A rooted tree in which every intermediate node has exactly two descendants, used for efficient
+      lookup in ordered sets.
+    composed_of:
+    - rooted_tree
+    tier: 2
+  cut_edge:
+    defines: An edge whose removal disconnects a graph; equivalently, an edge that is not part of any
+      cycle.
+    composed_of:
+    - cycle
+    - connected_graph
+    tier: 1
+  tree_characterizations:
+    defines: A set of equivalent conditions (n = m+1, unique paths between vertices, every edge a cut
+      edge, etc.) that identify when a connected graph is a tree.
+    composed_of:
+    - tree
+    - cut_edge
+    - connected_graph
+    tier: 2
+  spanning_tree:
+    defines: An acyclic connected subgraph of a graph G that contains all of G's vertices.
+    composed_of:
+    - tree
+    - connected_graph
+    tier: 1
+  minimum_spanning_tree:
+    defines: A spanning tree of a weighted connected graph whose total edge weight is minimal among all
+      spanning trees.
+    composed_of:
+    - spanning_tree
+    - weighted_graph
+    tier: 2
+  routing_protocol:
+    defines: A collection of specifications describing how a node in a communication network forwards
+      a message toward its destination.
+    composed_of:
+    - connected_graph
+    tier: 1
+  sink_tree:
+    defines: A spanning tree rooted at a destination node u, along which all messages destined for u are
+      routed.
+    composed_of:
+    - spanning_tree
+    - routing_protocol
+    tier: 2
+applications:
+  kruskals_algorithm:
+    defines: An algorithm that constructs a minimum spanning tree by greedily adding the lowest-weight
+      edge that does not create a cycle.
+    needs:
+    - minimum_spanning_tree
+    - cycle
+    tier: 3
+  dijkstras_sink_tree_algorithm:
+    defines: An algorithm that constructs an optimal sink tree rooted at a destination vertex in a directed
+      weighted graph with nonnegative weights.
+    needs:
+    - sink_tree
+    - weighted_graph
+    tier: 3
+  bellman_ford_algorithm:
+    defines: A decentralized algorithm in which each node iteratively computes optimal paths to other
+      nodes using only locally available information from neighbors.
+    needs:
+    - sink_tree
+    - routing_protocol
+    tier: 3
+  count_to_infinity_problem:
+    defines: A convergence failure of the Bellman-Ford algorithm in which nodes repeatedly increase their
+      advertised routing cost after a link failure, without stabilizing.
+    needs:
+    - bellman_ford_algorithm
+    tier: 4
+  algorithmic_complexity_comparison:
+    defines: An analysis comparing the computational time of Dijkstra's and Bellman-Ford's algorithms
+      as a function of graph size, using big O notation.
+    needs:
+    - dijkstras_sink_tree_algorithm
+    - bellman_ford_algorithm
+    - big_o_notation
+    tier: 4
